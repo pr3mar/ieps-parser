@@ -41,10 +41,10 @@ def parse(htmlFile, jsonFile):
             "Date": date[i], 
             "Year": year[i], 
             "KM": km[i], 
-            "Car type": carType[i],
+            "Fuel type": carType[i],
             "City": city[i],
             "Current Price": currentPrice[i],
-            "Old Pice": oldPrice[i]
+            "Old Price": oldPrice[i]
         }for i in range(0,len(img))
     }
 
