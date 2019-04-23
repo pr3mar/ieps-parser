@@ -1,0 +1,6 @@
+body{background:none}
+.header,.topnav,.advert_section,.btm_add_cont,.footer,.cont_add,.btn,.tab,.date_tag,#like,#preporuci,#share_box,#slicni_oglasi,#compare{display:none}
+#main_wrapper {width:auto;-moz-box-shadow:none;-webkit-box-shadow:none;-khtml-box-shadow:none;box-shadow:none}
+.section2{width:auto;float:none}
+.auto_desc,.gallery{border:0}
+.left_post_content{width:100%}
