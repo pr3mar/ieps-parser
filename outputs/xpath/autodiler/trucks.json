@@ -1,5 +1,5 @@
 {
-    "Item_1": {
+    "Vehicle_1": {
         "Name": "Iveco - DAILY 50C15",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_014.jpg",
         "Date": "18.04.2019.",
@@ -10,7 +10,7 @@
         "New Price": "35500 €",
         "Old Price": ""
     },
-    "Item_2": {
+    "Vehicle_2": {
         "Name": "Mercedes Benz - Vario",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_004.jpg",
         "Date": "21.04.2019.",
@@ -21,7 +21,7 @@
         "New Price": "3800 €",
         "Old Price": ""
     },
-    "Item_3": {
+    "Vehicle_3": {
         "Name": "Mercedes Benz - Mercedes Atego",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_006.jpg",
         "Date": "20.04.2019.",
@@ -32,7 +32,7 @@
         "New Price": "11500 €",
         "Old Price": ""
     },
-    "Item_4": {
+    "Vehicle_4": {
         "Name": "Iveco - Daily",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_009.jpg",
         "Date": "20.04.2019.",
@@ -43,7 +43,7 @@
         "New Price": "6500 €",
         "Old Price": ""
     },
-    "Item_5": {
+    "Vehicle_5": {
         "Name": "Mercedes Benz - atego 816",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_012.jpg",
         "Date": "20.04.2019.",
@@ -54,7 +54,7 @@
         "New Price": "10700 €",
         "Old Price": ""
     },
-    "Item_6": {
+    "Vehicle_6": {
         "Name": "Scania - R380",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_020.jpg",
         "Date": "20.04.2019.",
@@ -65,7 +65,7 @@
         "New Price": "39500 €",
         "Old Price": ""
     },
-    "Item_7": {
+    "Vehicle_7": {
         "Name": "Volvo - FH-12",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_021.jpg",
         "Date": "20.04.2019.",
@@ -76,7 +76,7 @@
         "New Price": "13000 €",
         "Old Price": ""
     },
-    "Item_8": {
+    "Vehicle_8": {
         "Name": "Iveco - dejly 35C18",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_013.jpg",
         "Date": "20.04.2019.",
@@ -87,7 +87,7 @@
         "New Price": "13500 €",
         "Old Price": ""
     },
-    "Item_9": {
+    "Vehicle_9": {
         "Name": "Ford - Tranzit",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_005.jpg",
         "Date": "20.04.2019.",
@@ -98,7 +98,7 @@
         "New Price": "5900 €",
         "Old Price": ""
     },
-    "Item_10": {
+    "Vehicle_10": {
         "Name": "TAM - Mogus 4x4",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_015.jpg",
         "Date": "20.04.2019.",
@@ -109,7 +109,7 @@
         "New Price": "3900 €",
         "Old Price": "4500 €"
     },
-    "Item_11": {
+    "Vehicle_11": {
         "Name": "Mercedes Benz - ATEGO 1224",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_002.jpg",
         "Date": "20.04.2019.",
@@ -120,7 +120,7 @@
         "New Price": "10950 €",
         "Old Price": "11500 €"
     },
-    "Item_12": {
+    "Vehicle_12": {
         "Name": "Mercedes Benz - ATEGO 1223",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_003.jpg",
         "Date": "20.04.2019.",
@@ -131,7 +131,7 @@
         "New Price": "9300 €",
         "Old Price": "9500 €"
     },
-    "Item_13": {
+    "Vehicle_13": {
         "Name": "Mercedes Benz - vario",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_010.jpg",
         "Date": "20.04.2019.",
@@ -142,7 +142,7 @@
         "New Price": "15000 €",
         "Old Price": ""
     },
-    "Item_14": {
+    "Vehicle_14": {
         "Name": "Mercedes Benz - 1422",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_025.jpg",
         "Date": "20.04.2019.",
@@ -153,7 +153,7 @@
         "New Price": "7000 €",
         "Old Price": ""
     },
-    "Item_15": {
+    "Vehicle_15": {
         "Name": "MAN - krone azp 11",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110.jpg",
         "Date": "20.04.2019.",
@@ -164,7 +164,7 @@
         "New Price": "6000 €",
         "Old Price": ""
     },
-    "Item_16": {
+    "Vehicle_16": {
         "Name": "Volkswagen - LT",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_008.jpg",
         "Date": "19.04.2019.",
@@ -175,7 +175,7 @@
         "New Price": "4600 €",
         "Old Price": ""
     },
-    "Item_17": {
+    "Vehicle_17": {
         "Name": "Volkswagen - 181",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_024.jpg",
         "Date": "19.04.2019.",
@@ -186,7 +186,7 @@
         "New Price": "4600 €",
         "Old Price": ""
     },
-    "Item_18": {
+    "Vehicle_18": {
         "Name": "MAN - TGL10-18",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_023.jpg",
         "Date": "19.04.2019.",
@@ -197,7 +197,7 @@
         "New Price": "35500 €",
         "Old Price": ""
     },
-    "Item_19": {
+    "Vehicle_19": {
         "Name": "Mercedes Benz - atego 1528",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_018.jpg",
         "Date": "19.04.2019.",
@@ -208,7 +208,7 @@
         "New Price": "4000 €",
         "Old Price": ""
     },
-    "Item_20": {
+    "Vehicle_20": {
         "Name": "Mercedes Benz - Atego",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_007.jpg",
         "Date": "19.04.2019.",
@@ -219,7 +219,7 @@
         "New Price": "7500 €",
         "Old Price": ""
     },
-    "Item_21": {
+    "Vehicle_21": {
         "Name": "Scania - 112H",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_026.jpg",
         "Date": "19.04.2019.",
@@ -230,7 +230,7 @@
         "New Price": "4100 €",
         "Old Price": ""
     },
-    "Item_22": {
+    "Vehicle_22": {
         "Name": "Iveco - Eurokargo 8E150",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_028.jpg",
         "Date": "19.04.2019.",
@@ -241,7 +241,7 @@
         "New Price": "3000 €",
         "Old Price": ""
     },
-    "Item_23": {
+    "Vehicle_23": {
         "Name": "Mercedes Benz - 1323",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_017.jpg",
         "Date": "19.04.2019.",
@@ -252,7 +252,7 @@
         "New Price": "8500 €",
         "Old Price": ""
     },
-    "Item_24": {
+    "Vehicle_24": {
         "Name": "Mercedes Benz - 1845",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_016.jpg",
         "Date": "19.04.2019.",
@@ -263,7 +263,7 @@
         "New Price": "35000 €",
         "Old Price": ""
     },
-    "Item_25": {
+    "Vehicle_25": {
         "Name": "Mercedes Benz - Actros 2543 KLIMA RETARDER",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_027.jpg",
         "Date": "19.04.2019.",
@@ -274,7 +274,7 @@
         "New Price": "15800 €",
         "Old Price": ""
     },
-    "Item_26": {
+    "Vehicle_26": {
         "Name": "Mercedes Benz - Actros 1841",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_022.jpg",
         "Date": "19.04.2019.",
@@ -285,7 +285,7 @@
         "New Price": "13000 €",
         "Old Price": ""
     },
-    "Item_27": {
+    "Vehicle_27": {
         "Name": "Scania - R440",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_019.jpg",
         "Date": "19.04.2019.",
@@ -296,7 +296,7 @@
         "New Price": "32500 €",
         "Old Price": ""
     },
-    "Item_28": {
+    "Vehicle_28": {
         "Name": "Scania - R500 V8",
         "Image": "Kamioni%20|%20AutoDiler.ME%20Crna%20Gora%20|%20Auto%20Oglasi%20|%20SMS%20Oglasi%20|%20Adresar%20|%20Auto%20Vijesti%20-%20CRNA%20GORA_files/0_146x110_011.jpg",
         "Date": "19.04.2019.",
