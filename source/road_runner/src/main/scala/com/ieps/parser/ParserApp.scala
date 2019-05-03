@@ -18,7 +18,7 @@ object ParserApp extends App with StrictLogging {
         | - absolute paths to 2 HTML pages from the same base URL
         |
         | Example call:
-        | ./roadRunner <baseUrl> <path 1> <path 2>
+        | ./roadRunner <baseUrl> <path 1> <path 2> ... <path N>
       """.stripMargin)
     System.exit(-1)
   }
@@ -28,5 +28,9 @@ object ParserApp extends App with StrictLogging {
     Jsoup.parse(new File(arg), "UTF-8", baseUrl)
   }.toList
 
-  RoadRunner(inputFiles)
+  Utils.time("RoadRunner"){
+    val roadRunner = RoadRunner(inputFiles)
+    roadRunner.run()
+//    roadRunner.outputStrippedHtml()
+  }
 }
