@@ -157,8 +157,6 @@
    </tr>
   </tbody>
  </table>
- <!-- buildtoppage end -->
- <!-- buildleftcolumn start -->
  <table border="0" cellpadding="0" cellspacing="0" width="770">
   <tbody>
    <tr>
@@ -471,7 +469,6 @@
      <img src="jewelry02_files/ms.gif" width="7" height="1" border="0" />
     </td>
     <td bgcolor="#ffffff" valign="top" align="left">
-     <!-- buildleftcolumn end -->
      <br />
      <b>
       <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=storelist&amp;sto_id=4">
@@ -1465,6 +1462,4 @@
   <area shape="rect" coords="123,0,200,58" href="http://www.bbbonline.org/cks.asp?id=10010249233612695" target="new">
   </area>
  </map>
- <!-- cache built: 2003-02-24/05:23:15 -->
- <!-- server: web8.overstock.com -->
 </body>

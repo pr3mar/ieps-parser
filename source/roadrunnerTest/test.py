@@ -6,6 +6,7 @@ def roadrunner(htmlFile1, htmlFile2):
     wrapper = []
     sample = []
     output = []
+    outputIndexes = []
 
     def optional(list1, list2):
         wrapperTag = list1[0]
@@ -13,11 +14,8 @@ def roadrunner(htmlFile1, htmlFile2):
         optionalTag = ''
         if wrapperTag in list2:
             optionalTag = (list2.index(wrapperTag), True)
-        else:
-            optionalTag = (1, True)
-        if sampleTag in list1:
+        elif sampleTag in list1:
             optionalTag = (list1.index(sampleTag), False)
-            optionalTag = (1, False)
         return optionalTag
 
     def isTag(tag):
@@ -46,68 +44,95 @@ def roadrunner(htmlFile1, htmlFile2):
                 tags.append(x)
         return tags
 
-    def iterator(i, j):
-        terminalTagWrapper = wrapper[i-1]
-        terminalTagSample = sample[j-1]
-        initialTagWrapper = wrapper[i]
-        initialTagSample = sample[j]
+    def iterator(tokensList1, tokensList2, i, j):
+        terminalTagWrapper = tokensList1[i-1]
+        terminalTagSample = tokensList2[j-1]
+        initialTagWrapper = tokensList1[i]
+        initialTagSample = tokensList2[j]
         sqareWrapper = (initialTagWrapper, terminalTagWrapper)
         sqareSample = (initialTagSample, terminalTagSample)
 # Find positions of terminal tags and initial tags on wrapper 
-        poswt = findTerminalTagsPosition(wrapper, terminalTagWrapper, i)
-        poswi = findInitialTagsPosition(wrapper, initialTagWrapper, i)
+        poswt = findTerminalTagsPosition(tokensList1, terminalTagWrapper, i)
+        poswi = findInitialTagsPosition(tokensList1, initialTagWrapper, i)
 # Find positions of terminal tags and initial tags on sample
-        possi = findInitialTagsPosition(sample, initialTagSample, j)
-        posst = findTerminalTagsPosition(sample, terminalTagSample, j)
+        possi = findInitialTagsPosition(tokensList2, initialTagSample, j)
+        posst = findTerminalTagsPosition(tokensList2, terminalTagSample, j)
         # FIX!!!!!!!!!!!!
         if possi != [] and posst != []:
-            return match(j, possi[-1], posst[0], True)
+            return match(j, possi[-1], posst[0], tokensList2, True)
         elif poswi != [] and poswt != []:
-            return match(i, poswi[-1], poswt[0], False)
+            return match(i, poswi[-1], poswt[0], tokensList1, False)
 
-
-    def match(currentPosition, initialTag, terminalTag, flag):
+    def match(currentPosition, initialTag, terminalTag, page, flag):
 # flag = False -> iterator is on the wrraper page
 # flag = True -> iterator is on the samlpe page
-        page = sample if flag else wrapper
-        iterator1 = []
-        iterator2 = []
-        for i in range(terminalTag, currentPosition - 1, -1):
-            iterator1.append(page[i])
-        for i in range(currentPosition - 1, initialTag - 1, -1):
-            iterator2.append(page[i])
+        iteratorsList1 = page[terminalTag: currentPosition - 1: -1]
+        iteratorsList2 = page[currentPosition - 1: initialTag - 1: -1]
         i = 0
         j = 0
-        iteratorsList = []
-        while i < len(iterator1) and j < len(iterator2):
-            if iterator1[i] == iterator2[j]:
-                iteratorsList.append(iterator1[i])
+        iteratorsMatch = []
+        while i < len(iteratorsList1) and j < len(iteratorsList2):
+            if iteratorsList1[i] == iteratorsList2[j]:
+                iteratorsMatch.append(iteratorsList1[i])
                 i += 1
                 j += 1
-            elif iterator1[i] == '' or iterator2[j] == '':
+            elif iteratorsList1[i] == '' or iteratorsList2[j] == '':
                 i += 1
                 j += 1
-            elif (not isTag(iterator1[i]) and not isTag(iterator2[j])) or (iterator1[i] == '#PCDATA' and not isTag(iterator2[j])) or (iterator2[j] == '#PCDATA' and not isTag(iterator1[i])):
-                iteratorsList.append('#PCDATA')
-                iterator1[i] = '#PCDATA'
-                iterator2[j] = '#PCDATA'
+            elif not isTag(iteratorsList1[i]) and not isTag(iteratorsList2[j]):
+                iteratorsMatch.append('#PCDATA')
+                iteratorsList1[i] = '#PCDATA'
+                iteratorsList2[j] = '#PCDATA'
                 i += 1
                 j += 1
+            elif isTag(iteratorsList1[i]) and not isTag(iteratorsList2[j]):
+                output.append(iteratorsList2[j])
+                j += 1
+            elif isTag(iteratorsList2[j]) and not isTag(iteratorsList1[i]):
+                output.append(iteratorsList1[i])
+                i += 1
+#             elif isTag(iteratorsList1[i]) and isTag(iteratorsList2[j]):
+#                 iterators = iterator(iteratorsList1, iteratorsList2, i, j)
+#                 if iterators != None:
+#                     output.append('(' + iterators[0] + ')+')
+# # flag = False -> iterator is in the wrraper page
+# # flag = True -> iterator is in the samlpe page
+#                     if iterators[2]:
+#                         j += iterators[1]
+#                     else:
+#                         i += iterators[1]
+#                 else:
+#                     mismatch = optional(iteratorsList1[i:], iteratorsList2[j:])
+# # mismatch[0] = False -> optional tag is on the wrraper
+# # mismatch[0] = True -> optional tag is on the samlpe
+#                     if mismatch != '':
+#                         if mismatch[1]:
+#                             optionalTags = ''
+#                             for x in range(j, j+mismatch[0]):
+#                                 optionalTags += iteratorsList2[x]
+#                             output.append('('+ optionalTags +')?')
+#                             j += mismatch[0]
+#                         else:
+#                             optionalTags = ''
+#                             for x in range(i, i+mismatch[0]):
+#                                 optionalTags += iteratorsList1[x]
+#                             output.append('('+ optionalTags +')?')
+#                             i += mismatch[0]
+#                     else:
+#                         i += 1
+#                         j += 1
             else:
                 i += 1
                 j += 1
-        iteratorTag = ''
-        for k in range(len(iteratorsList)-1, -1, -1):
-            iteratorTag += iteratorsList[k]
 # Remove iterator from the output
         i = 1
-        while output[-1] == iteratorsList[i - 1]:
+        while output[-1] == iteratorsMatch[i - 1]:
             output.pop()
-            if i >= len(iteratorsList):
+            if i >= len(iteratorsMatch):
                 i = 1
             else:
                 i+= 1
-        return [iteratorTag, len(iteratorsList), flag]
+        return [iteratorsMatch, len(iteratorsMatch), flag]
 
 
     start = time.time()
@@ -115,14 +140,17 @@ def roadrunner(htmlFile1, htmlFile2):
     pageContent1 = open(htmlFile1, 'r').read().replace('\n', ' ').lower()
     pageContent2 = open(htmlFile2, 'r').read().replace('\n', ' ').lower()
 # Take only body of the html
-    body1 = re.sub('.*<head>.*<\/head>', '', pageContent1)
-    body2 = re.sub('.*<head>.*<\/head>', '', pageContent2)
+    body1 = re.sub('.*<head>.*?<\/head>', '', pageContent1)
+    body2 = re.sub('.*<head>.*?<\/head>', '', pageContent2)
 # Remove all script tags
-    bodyNoScripts1 = re.sub('<script.*?script>', '', body1)
-    bodyNoScripts2 = re.sub('<script.*?script>', '', body2)
+    body1 = re.sub('<script.*?script>', '', body1)
+    body2 = re.sub('<script.*?script>', '', body2)
+# Remove all comments
+    body1 = re.sub('<!\-\-.*?\-\->', '', body1)
+    body2 = re.sub('<!\-\-.*?\-\->', '', body2)
 # Create xml from the pre-processed input html 
-    soup1 = BeautifulSoup.BeautifulSoup(bodyNoScripts1)
-    soup2 = BeautifulSoup.BeautifulSoup(bodyNoScripts2)
+    soup1 = BeautifulSoup.BeautifulSoup(body1)
+    soup2 = BeautifulSoup.BeautifulSoup(body2)
     xml1 = soup1.prettify()
     xml2 = soup2.prettify()
 # Write xml1 in a file 
@@ -156,14 +184,10 @@ def roadrunner(htmlFile1, htmlFile2):
             i += 1
             j += 1
         elif isTag(wrapper[i]) and not isTag(sample[j]):
-            print(output)
             output.append('#PCDATA')
-            print(output)
             j += 1
         elif not isTag(wrapper[i]) and isTag(sample[j]):
-            print(output)
             output.append('#PCDATA')
-            print(output)
             i += 1
         elif wrapper[i] == '' or sample[j] == '':
             i += 1
@@ -175,9 +199,11 @@ def roadrunner(htmlFile1, htmlFile2):
             i += 1
             j += 1
         elif isTag(wrapper[i]) and isTag(sample[j]):
-            iterators = iterator(i, j)
+            iterators = iterator(wrapper, sample, i, j)
             if iterators != None:
-                output.append('(' + iterators[0] + ')+')
+                outputIndexes.append([len(output), len(output) + len(iterators[0]), '+'])
+                for k in range(len(iterators[0]) - 1, -1, -1):
+                    output.append(iterators[0][k])
 # flag = False -> iterator is in the wrraper page
 # flag = True -> iterator is in the samlpe page
                 if iterators[2]:
@@ -189,17 +215,15 @@ def roadrunner(htmlFile1, htmlFile2):
 # mismatch[0] = False -> optional tag is on the wrraper
 # mismatch[0] = True -> optional tag is on the samlpe
                 if mismatch != '':
+                    outputIndexes.append([len(output), len(output) + mismatch[0], '?'])
                     if mismatch[1]:
-                        optionalTags = ''
                         for x in range(j, j+mismatch[0]):
-                            optionalTags += sample[x]
-                        output.append('('+ optionalTags +')?')
+                            output.append(sample[x])
                         j += mismatch[0]
                     else:
                         optionalTags = ''
                         for x in range(i, i+mismatch[0]):
-                            optionalTags += wrapper[x]
-                        output.append('('+ optionalTags +')?')
+                            output.append(wrapper[x])
                         i += mismatch[0]
                 else:
                     i += 1
@@ -208,6 +232,14 @@ def roadrunner(htmlFile1, htmlFile2):
             i += 1
             j += 1
             
+    for k in range(len(outputIndexes) - 1, -1, -1):
+        if outputIndexes[k][2] == '+':
+            output[outputIndexes[k][1]] = output[outputIndexes[k][1]] + str(')+')
+            output[outputIndexes[k][0]] = str('(') + output[outputIndexes[k][0]]
+        elif outputIndexes[k][2] == '?':
+            output[outputIndexes[k][1]] = output[outputIndexes[k][1]] + str(')?')
+            output[outputIndexes[k][0]] = str('(') + output[outputIndexes[k][0]]
+
     print(' '.join(output))
     print(end - start)
     end2 = time.time()
