@@ -1,0 +1,2331 @@
+<body topmargin="0" leftmargin="0" rightmargin="0" marginwidth="0" marginheight="0" bgcolor="#ffffff" text="#1117a9" onload="getfocus();">
+ <input type="hidden" name="page" value="search" />
+ <table border="0" cellpadding="0" cellspacing="0" width="770">
+  <tbody>
+   <tr bgcolor="#ffffff">
+    <td width="1">
+    </td>
+    <td width="769" align="center" valign="top">
+     <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tbody>
+       <tr>
+        <td height="43" align="right" valign="top">
+         <table width="100%">
+          <tbody>
+           <tr>
+            <td width="152" align="left">
+             <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=home">
+              <img src="jewelry01_files/oslogo152_40.gif" width="152" height="40" border="0" />
+             </a>
+            </td>
+            <td width="385" align="center">
+             <img src="jewelry01_files/yournewoverstock.gif" usemap="#yourmap.html" border="0" width="416" height="27" alt="menu" />
+            </td>
+            <td width="163" align="right">
+             <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=staticpage&amp;page_id=18">
+              <img src="jewelry01_files/flatrateship.gif" width="163" height="22" border="0" alt="flat rate shipping" />
+             </a>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+         <map name="yourmap.html">
+          <area shape="rect" coords="  0, 0,  59, 26" href="http://www.overstock.com/cgi-bin/d2.cgi?page=home">
+          </area>
+          <area shape="rect" coords=" 60, 0, 132, 26" href="http://www.overstock.com/cgi-bin/d2.cgi?page=sitemap">
+          </area>
+          <area shape="rect" coords="133, 0, 236, 26" href="http://www.overstock.com/cgi-bin/d2.cgi?page=staticpage&amp;page_id=9">
+          </area>
+          <area shape="rect" coords="235, 0, 326, 26" href="https://www.overstock.com/cgi-bin/d2.cgi?page=myaccount">
+          </area>
+          <area shape="rect" coords="327, 0, 416, 26" href="http://www.overstock.com/cgi-bin/d2.cgi?page=cart">
+          </area>
+         </map>
+        </td>
+       </tr>
+       <tr>
+        <td height="30" align="center">
+         <a onmouseover="closeall(); showlayer(" store07="store07">
+          <img src="jewelry01_files/apparelshoestore.gif" height="30" width="101" alt="apparel, shoes &amp; access." border="0" />
+         </a>
+         <a onmouseover="closeall(); showlayer(" store03="store03">
+          <img src="jewelry01_files/entertainstore.gif" height="30" width="101" alt="books, movies, cds, games" border="0" />
+         </a>
+         <a onmouseover="closeall(); showlayer(" store02="store02">
+          <img src="jewelry01_files/electronicstore.gif" height="30" width="101" alt="electronics &amp; computers" border="0" />
+         </a>
+         <a onmouseover="closeall(); showlayer(" store01="store01">
+          <img src="jewelry01_files/homegardenstore.gif" height="30" width="101" alt="home &amp; garden" border="0" />
+         </a>
+         <a onmouseover="closeall(); showlayer(" store04="store04">
+          <img src="jewelry01_files/jewelrystorerev.gif" height="30" width="101" alt="jewelry, watches &amp; gifts" border="0" />
+         </a>
+         <a onmouseover="closeall(); showlayer(" store05="store05">
+          <img src="jewelry01_files/sportstore.gif" height="30" width="101" alt="sports, travel &amp; toys" border="0" />
+         </a>
+         <a onmouseover="closeall(); showlayer(" store06="store06">
+          <img src="jewelry01_files/worldstore.gif" height="30" width="101" alt="worldstock" border="0" />
+         </a>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </td>
+   </tr>
+   <tr bgcolor="#000000">
+    <td height="1" colspan="2">
+     <img src="jewelry01_files/ms.gif" height="1" width="1" />
+    </td>
+   </tr>
+   <form method="post" name="searchform" action="http://www.overstock.com/cgi-bin/d2.cgi">
+   </form>
+   <tr bgcolor="#4a5fa7">
+    <td colspan="2">
+     <table width="100%" border="0" cellpadding="0" cellspacing="0">
+      <tbody>
+       <tr>
+        <td align="left">
+         <table>
+          <tbody>
+           <tr>
+            <td>
+             <span class="littlewhite">
+              search:
+             </span>
+              
+             <select name="sitearea" size="1" onclick="endfocus();">
+              <option value="0" selected="selected">
+               all stores
+              </option>
+              <option value="1">
+               home &amp; garden
+              </option>
+              <option value="2">
+               electronics &amp; computers
+              </option>
+              <option value="3">
+               books, movies, cds, games
+              </option>
+              <option value="4">
+               jewelry, watches &amp; gifts
+              </option>
+              <option value="5">
+               sports, travel &amp; toys
+              </option>
+              <option value="6">
+               worldstock
+              </option>
+              <option value="7">
+               apparel, shoes &amp; access.
+              </option>
+             </select>
+            </td>
+            <td>
+              
+            </td>
+            <td>
+             <input type="text" name="keyword" size="20" maxlength="128" value="" onclick="endfocus();" />
+            </td>
+            <td>
+             <input type="image" name="go" src="jewelry01_files/newgobut.gif" border="0" />
+               
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </td>
+        <td align="right">
+         <img src="jewelry01_files/ms.gif" border="0" height="3" width="1" />
+         <br />
+         <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=storepick&amp;sto_id=3&amp;stl_id=11">
+          <img src="jewelry01_files/mini_dvd_0219.gif" height="25" width="290" border="0" alt="hot dvd &amp; vhs titles at overstock.com" />
+         </a>
+           
+        </td>
+        <td width="1" bgcolor="#000000">
+         <img src="jewelry01_files/ms.gif" border="0" height="1" width="1" />
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </td>
+   </tr>
+   <tr bgcolor="#000000">
+    <td height="1" colspan="2">
+     <img src="jewelry01_files/ms.gif" height="1" width="1" />
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <!-- buildtoppage end -->
+ <!-- buildleftcolumn start -->
+ <table border="0" cellpadding="0" cellspacing="0" width="770">
+  <tbody>
+   <tr>
+    <td bgcolor="#000000" width="1" valign="top">
+     <img src="jewelry01_files/ms.gif" width="1" height="1" border="0" />
+    </td>
+    <td bgcolor="#eeeeee" width="160" valign="top">
+     <br />
+     <table bgcolor="#d2dbfb" border="2" cellpadding="0" cellspacing="0" width="100%">
+      <tbody>
+       <tr>
+        <td>
+         <table>
+          <tbody>
+           <tr>
+            <td>
+              
+            </td>
+            <td>
+             <span class="littleorange">
+              <b>
+               diamonds
+              </b>
+             </span>
+            </td>
+           </tr>
+           <tr>
+            <td>
+              
+            </td>
+            <td>
+             <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=187">
+              bracelets
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td>
+              
+            </td>
+            <td>
+             <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=1136">
+              bridal sets
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td>
+              
+            </td>
+            <td>
+             <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=188">
+              earrings
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td>
+              
+            </td>
+            <td>
+             <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=1031">
+              engagement rings
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td>
+              
+            </td>
+            <td>
+             <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=185">
+              fashion rings
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td>
+              
+            </td>
+            <td>
+             <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=186">
+              necklaces
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td>
+              
+            </td>
+            <td>
+             <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=189">
+              pendants
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td>
+              
+            </td>
+            <td>
+             <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=604">
+              pins/slides
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td>
+              
+            </td>
+            <td>
+             <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=603">
+              solitaire earrings/pendants
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td>
+              
+            </td>
+            <td>
+             <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=1135">
+              solitaire rings
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td>
+              
+            </td>
+            <td>
+             <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=602">
+              wedding/anniversary bands
+             </a>
+            </td>
+           </tr>
+           <tr>
+            <td>
+              
+            </td>
+            <td>
+             <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=999">
+              <b>
+               view all
+              </b>
+             </a>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <br />
+      
+     <span class="littleorange">
+      <b>
+       stores
+      </b>
+     </span>
+     <br />
+     <table bgcolor="#eeeeee" border="0" cellpadding="3" cellspacing="0" width="100%">
+      <tbody>
+       <tr>
+        <td>
+         <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=storelist&amp;sto_id=7">
+          apparel, shoes &amp; access.
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=storelist&amp;sto_id=3">
+          books, movies, cds, games
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=storelist&amp;sto_id=2">
+          electronics &amp; computers
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=storelist&amp;sto_id=1">
+          home &amp; garden
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=storelist&amp;sto_id=4">
+          <b>
+           jewelry, watches &amp; gifts
+          </b>
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=storelist&amp;sto_id=5">
+          sports, travel &amp; toys
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=storelist&amp;sto_id=6">
+          worldstock
+         </a>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <br />
+      
+     <span class="littleorange">
+      <b>
+       new stock
+      </b>
+     </span>
+     <br />
+     <table bgcolor="#eeeeee" border="0" cellpadding="3" cellspacing="0" width="160">
+      <tbody>
+       <tr>
+        <td>
+         <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=420&amp;pro_ssub_cat=309&amp;item_count=15&amp;cat_sortby=5">
+          ralph lauren $29.95
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=420&amp;pro_ssub_cat=309&amp;cat_sortby=5">
+          ben sherman 53% off
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=261780">
+          pre-order harry potter dvd
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=259359">
+          hp 2ghz system $499
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=heywhatsnew">
+          new items within 7 days
+         </a>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <br />
+      
+     <span class="littleorange">
+      <b>
+       customer service
+      </b>
+     </span>
+     <br />
+     <table bgcolor="#eeeeee" border="0" cellpadding="3" cellspacing="0" width="160">
+      <tbody>
+       <tr>
+        <td>
+         <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=cart">
+          shopping cart &amp; checkout
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="https://www.overstock.com/cgi-bin/d2.cgi?page=myaccount">
+          track your order
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="https://www.overstock.com/cgi-bin/d2.cgi?page=myaccount">
+          your account
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=staticpage&amp;page_id=9">
+          help &amp; faq
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=staticpage&amp;page_id=27">
+          best price guarantee
+         </a>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <br />
+      
+     <span class="littleorange">
+      <b>
+       about us
+      </b>
+     </span>
+     <br />
+     <table bgcolor="#eeeeee" border="0" cellpadding="3" cellspacing="0" width="160">
+      <tbody>
+       <tr>
+        <td>
+         <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=staticpage&amp;page_id=5">
+          about us
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=staticpage&amp;page_id=8">
+          privacy &amp; security
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=staticpage&amp;page_id=25">
+          terms &amp; conditions
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="http://www.overstock.com/alliance.html" target="new">
+          become an affiliate
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="http://www.overstockb2b.com/">
+          business purchases
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="http://partners.overstock.com/cgi-bin/sellinv.cgi" target="_blank">
+          have products to sell?
+         </a>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <a href="http://www.shareholder.com/overstock" target="_blank">
+          investor relations
+         </a>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <img src="jewelry01_files/colspacer.gif" border="0" />
+     <br />
+    </td>
+    <td bgcolor="#000000" width="1" valign="top">
+     <img src="jewelry01_files/ms.gif" width="1" height="1" border="0" />
+    </td>
+    <td bgcolor="#ffffff" width="7" valign="top">
+     <img src="jewelry01_files/ms.gif" width="7" height="1" border="0" />
+    </td>
+    <td bgcolor="#ffffff" valign="top" align="left">
+     <!-- buildleftcolumn end -->
+     <br />
+     <b>
+      <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=storelist&amp;sto_id=4">
+       jewelry, watches &amp; gifts
+      </a>
+      &gt;
+      <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=storepick&amp;sto_id=4&amp;stl_id=13">
+       jewelry
+      </a>
+      &gt;
+      <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=999">
+       diamonds
+      </a>
+      &gt; view all
+     </b>
+     <br />
+     <table width="100%">
+      <tbody>
+       <tr>
+        <td align="center">
+         <br />
+         <table border="1" cellpadding="0" cellspacing="0">
+          <tbody>
+           <tr>
+            <td>
+             <table width="100%" border="0" cellpadding="0" cellspacing="5" bgcolor="#d2dbfb">
+              <tbody>
+               <tr>
+                <td nowrap="nowrap" align="right">
+                 <span class="littleorange">
+                  <b>
+                   list sorted by:
+                  </b>
+                 </span>
+                </td>
+                <td nowrap="nowrap">
+                  
+                 <b>
+                  top sellers
+                 </b>
+                 |
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=999&amp;cat_sortby=3">
+                  discount
+                 </a>
+                 |
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=999&amp;cat_sortby=5">
+                  newest first
+                 </a>
+                 |
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=999&amp;cat_sortby=1">
+                  price
+                 </a>
+                 |
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=999&amp;cat_sortby=4">
+                  quantity
+                 </a>
+                 |
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=999&amp;cat_sortby=6">
+                  markdowns
+                 </a>
+                </td>
+               </tr>
+               <tr>
+                <td nowrap="nowrap" align="right">
+                  
+                 <span class="littleorange">
+                  <b>
+                   items:
+                  </b>
+                 </span>
+                </td>
+                <td nowrap="nowrap">
+                  
+                 <b>
+                  16
+                 </b>
+                 -
+                 <b>
+                  30
+                 </b>
+                 of
+                 <b>
+                  296
+                 </b>
+                   |  
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=999&amp;item_count=0&amp;cat_sortby=0">
+                  first page
+                 </a>
+                   |  
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=999&amp;item_count=0&amp;cat_sortby=0">
+                  previous 15
+                 </a>
+                   |  
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=999&amp;item_count=30&amp;cat_sortby=0">
+                  next 15
+                 </a>
+                   
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <table border="0" cellpadding="0" cellspacing="0" width="100%">
+          <tbody>
+           <tr>
+            <td valign="top">
+             <table border="0" cellpadding="2" cellspacing="0" width="100%">
+              <tbody>
+               <tr bgcolor="#ffffff">
+                <td valign="top" align="center">
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=157105">
+                      <img src="jewelry01_files/t923813.jpg" border="0" width="80" height="80" />
+                     </a>
+                    </td>
+                   </tr>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=157105">
+                      more info...
+                     </a>
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+                <td valign="top">
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=157105">
+                  <b>
+                   10-kt. seven diamond ladies heart ring (0.08 tw)
+                  </b>
+                 </a>
+                 <br />
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td valign="top">
+                     <table>
+                      <tbody>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          list price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <s>
+                          $149.00
+                         </s>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="bigred">
+                          <b>
+                           $69.99
+                          </b>
+                         </span>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          you save:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="littleorange">
+                          $79.01 (53%)
+                         </span>
+                        </td>
+                       </tr>
+                      </tbody>
+                     </table>
+                    </td>
+                    <td valign="top">
+                     <span class="normal">
+                      this ladies fashion ring dazzles with hearts and diamonds. the gold band is crafted into delicate, open hearts. seven brilliant-cut diamonds add a bit of sparkle.
+                      <br />
+                      <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=157105">
+                       <span class="tiny">
+                        <b>
+                         click here to purchase.
+                        </b>
+                       </span>
+                      </a>
+                     </span>
+                     <br />
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+               </tr>
+               <tr>
+                <td colspan="2" height="4">
+                 <img src="jewelry01_files/ms.gif" width="1" height="4" border="0" />
+                </td>
+               </tr>
+               <tr bgcolor="#dddddd">
+                <td valign="top" align="center">
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=43588">
+                      <img src="jewelry01_files/t915346.jpg" border="0" width="80" height="80" />
+                     </a>
+                    </td>
+                   </tr>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=43588">
+                      more info...
+                     </a>
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+                <td valign="top">
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=43588">
+                  <b>
+                   10-kt. diamond ring (.25 tw)
+                  </b>
+                 </a>
+                 <br />
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td valign="top">
+                     <table>
+                      <tbody>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          list price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <s>
+                          $250.00
+                         </s>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="bigred">
+                          <b>
+                           $74.90
+                          </b>
+                         </span>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          you save:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="littleorange">
+                          $175.10 (70%)
+                         </span>
+                        </td>
+                       </tr>
+                      </tbody>
+                     </table>
+                    </td>
+                    <td valign="top">
+                     <span class="normal">
+                      nineteen round diamonds accent this 10-karat yellow gold ring with filigree accents.
+                      <br />
+                      <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=43588">
+                       <span class="tiny">
+                        <b>
+                         click here to purchase.
+                        </b>
+                       </span>
+                      </a>
+                     </span>
+                     <br />
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+               </tr>
+               <tr>
+                <td colspan="2" height="4">
+                 <img src="jewelry01_files/ms.gif" width="1" height="4" border="0" />
+                </td>
+               </tr>
+               <tr bgcolor="#ffffff">
+                <td valign="top" align="center">
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=43385">
+                      <img src="jewelry01_files/t915225.jpg" border="0" width="80" height="80" />
+                     </a>
+                    </td>
+                   </tr>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=43385">
+                      more info...
+                     </a>
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+                <td valign="top">
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=43385">
+                  <b>
+                   10-kt. pearl and diamond butterfly earrings
+                  </b>
+                 </a>
+                 <br />
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td valign="top">
+                     <table>
+                      <tbody>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          list price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <s>
+                          $149.00
+                         </s>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="bigred">
+                          <b>
+                           $42.99
+                          </b>
+                         </span>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          you save:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="littleorange">
+                          $106.01 (71%)
+                         </span>
+                        </td>
+                       </tr>
+                      </tbody>
+                     </table>
+                    </td>
+                    <td valign="top">
+                     <span class="normal">
+                      perfectly proportioned 5.5- to 6-mm cultured pearls on 10-karat yellow gold settings highlight these petite earrings. a dainty rhodium-plated gold butterfly studded with a diamond (0.02 total carat weight, j-k color, i-2 clarity) rests atop each pearl.
+                      <br />
+                      <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=43385">
+                       <span class="tiny">
+                        <b>
+                         click here to purchase.
+                        </b>
+                       </span>
+                      </a>
+                     </span>
+                     <br />
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+               </tr>
+               <tr>
+                <td colspan="2" height="4">
+                 <img src="jewelry01_files/ms.gif" width="1" height="4" border="0" />
+                </td>
+               </tr>
+               <tr bgcolor="#dddddd">
+                <td valign="top" align="center">
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=86051">
+                      <img src="jewelry01_files/t922012.jpg" border="0" width="80" height="80" />
+                     </a>
+                    </td>
+                   </tr>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=86051">
+                      more info...
+                     </a>
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+                <td valign="top">
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=86051">
+                  <b>
+                   14-kt. diamond 's' tennis bracelet (2.00 tw)
+                  </b>
+                 </a>
+                 <br />
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td valign="top">
+                     <table>
+                      <tbody>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          list price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <s>
+                          $1,539.99
+                         </s>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="bigred">
+                          <b>
+                           $499.99
+                          </b>
+                         </span>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          you save:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="littleorange">
+                          $1,040.00 (67%)
+                         </span>
+                        </td>
+                       </tr>
+                      </tbody>
+                     </table>
+                    </td>
+                    <td valign="top">
+                     <span class="normal">
+                      invest in a swirl of light with this diamond 's' tennis bracelet. crafted in 14-karat gold, the piece features 49 diamonds for two full carats. the 7.25-inch bracelet closes with a pressure clasp.
+                      <br />
+                      <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=86051">
+                       <span class="tiny">
+                        <b>
+                         click here to purchase.
+                        </b>
+                       </span>
+                      </a>
+                     </span>
+                     <br />
+                     <table width="100%">
+                      <tbody>
+                       <tr>
+                        <td align="right">
+                         <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=86051">
+                          <img src="jewelry01_files/inventorylimit.gif" border="0" />
+                         </a>
+                        </td>
+                       </tr>
+                      </tbody>
+                     </table>
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+               </tr>
+               <tr>
+                <td colspan="2" height="4">
+                 <img src="jewelry01_files/ms.gif" width="1" height="4" border="0" />
+                </td>
+               </tr>
+               <tr bgcolor="#ffffff">
+                <td valign="top" align="center">
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=84047">
+                      <img src="jewelry01_files/t921718.jpg" border="0" width="80" height="80" />
+                     </a>
+                    </td>
+                   </tr>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=84047">
+                      more info...
+                     </a>
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+                <td valign="top">
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=84047">
+                  <b>
+                   10-kt. diamond band fashion ring (.11 tw)
+                  </b>
+                 </a>
+                 <br />
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td valign="top">
+                     <table>
+                      <tbody>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          list price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <s>
+                          $179.99
+                         </s>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="bigred">
+                          <b>
+                           $79.99
+                          </b>
+                         </span>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          you save:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="littleorange">
+                          $100.00 (55%)
+                         </span>
+                        </td>
+                       </tr>
+                      </tbody>
+                     </table>
+                    </td>
+                    <td valign="top">
+                     <span class="normal">
+                      crafted in white and yellow gold, this ring displays a band of seven round diamonds. order your new gold and diamond fashion ring today at our low, online price.
+                      <br />
+                      <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=84047">
+                       <span class="tiny">
+                        <b>
+                         click here to purchase.
+                        </b>
+                       </span>
+                      </a>
+                     </span>
+                     <br />
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+               </tr>
+               <tr>
+                <td colspan="2" height="4">
+                 <img src="jewelry01_files/ms.gif" width="1" height="4" border="0" />
+                </td>
+               </tr>
+               <tr bgcolor="#dddddd">
+                <td valign="top" align="center">
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=64080">
+                      <img src="jewelry01_files/t920189.jpg" border="0" width="80" height="80" />
+                     </a>
+                    </td>
+                   </tr>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=64080">
+                      more info...
+                     </a>
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+                <td valign="top">
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=64080">
+                  <b>
+                   14-kt. white gold, pearl and diamond ring
+                  </b>
+                 </a>
+                 <br />
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td valign="top">
+                     <table>
+                      <tbody>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          list price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <s>
+                          $419.99
+                         </s>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="bigred">
+                          <b>
+                           $149.99
+                          </b>
+                         </span>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          you save:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="littleorange">
+                          $270.00 (64%)
+                         </span>
+                        </td>
+                       </tr>
+                      </tbody>
+                     </table>
+                    </td>
+                    <td valign="top">
+                     <span class="normal">
+                      show your romantic side with this 14-karat diamond and pearl ring. set in a domed band of 14-karat white gold, the ring features a 7-mm cultured pearl. curved rows of diamonds flank the pearl.
+                      <br />
+                      <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=64080">
+                       <span class="tiny">
+                        <b>
+                         click here to purchase.
+                        </b>
+                       </span>
+                      </a>
+                     </span>
+                     <br />
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+               </tr>
+               <tr>
+                <td colspan="2" height="4">
+                 <img src="jewelry01_files/ms.gif" width="1" height="4" border="0" />
+                </td>
+               </tr>
+               <tr bgcolor="#ffffff">
+                <td valign="top" align="center">
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=69495">
+                      <img src="jewelry01_files/t921091a.jpg" border="0" width="80" height="80" />
+                     </a>
+                    </td>
+                   </tr>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=69495">
+                      more info...
+                     </a>
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+                <td valign="top">
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=69495">
+                  <b>
+                   14-kt. gold diamond present future pendant (.25tw)
+                  </b>
+                 </a>
+                 <br />
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td valign="top">
+                     <table>
+                      <tbody>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          list price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <s>
+                          $299.00
+                         </s>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="bigred">
+                          <b>
+                           $149.99
+                          </b>
+                         </span>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          you save:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="littleorange">
+                          $149.01 (49%)
+                         </span>
+                        </td>
+                       </tr>
+                      </tbody>
+                     </table>
+                    </td>
+                    <td valign="top">
+                     <span class="normal">
+                      designed with three large, sparkling diamonds to represent past, present, and future, this stunning pendant is set in gleaming 14-karat gold. it incorporates a total of nine diamonds (0.25 total carat weight, k color, i-2 to i-3 clarity).
+                      <br />
+                      <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=69495">
+                       <span class="tiny">
+                        <b>
+                         click here to purchase.
+                        </b>
+                       </span>
+                      </a>
+                     </span>
+                     <br />
+                     <table width="100%">
+                      <tbody>
+                       <tr>
+                        <td align="right">
+                         <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=69495">
+                          <img src="jewelry01_files/inventorylimit.gif" border="0" />
+                         </a>
+                        </td>
+                       </tr>
+                      </tbody>
+                     </table>
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+               </tr>
+               <tr>
+                <td colspan="2" height="4">
+                 <img src="jewelry01_files/ms.gif" width="1" height="4" border="0" />
+                </td>
+               </tr>
+               <tr bgcolor="#dddddd">
+                <td valign="top" align="center">
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=61826">
+                      <img src="jewelry01_files/t918993.jpg" border="0" width="80" height="80" />
+                     </a>
+                    </td>
+                   </tr>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=61826">
+                      more info...
+                     </a>
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+                <td valign="top">
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=61826">
+                  <b>
+                   14-kt. diamond solitaire pendant (.33 tw)
+                  </b>
+                 </a>
+                 <br />
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td valign="top">
+                     <table>
+                      <tbody>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          list price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <s>
+                          $1,019.99
+                         </s>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="bigred">
+                          <b>
+                           $319.99
+                          </b>
+                         </span>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          you save:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="littleorange">
+                          $700.00 (68%)
+                         </span>
+                        </td>
+                       </tr>
+                      </tbody>
+                     </table>
+                    </td>
+                    <td valign="top">
+                     <span class="normal">
+                      in this simple, yet elegant pendant, a round brilliant diamond (0.33 total carat weight, h-j color, i-1 to i-2 clarity) is prong-set in 14-karat white gold.
+                      <br />
+                      <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=61826">
+                       <span class="tiny">
+                        <b>
+                         click here to purchase.
+                        </b>
+                       </span>
+                      </a>
+                     </span>
+                     <br />
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+               </tr>
+               <tr>
+                <td colspan="2" height="4">
+                 <img src="jewelry01_files/ms.gif" width="1" height="4" border="0" />
+                </td>
+               </tr>
+               <tr bgcolor="#ffffff">
+                <td valign="top" align="center">
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=61550">
+                      <img src="jewelry01_files/t918932.jpg" border="0" width="80" height="80" />
+                     </a>
+                    </td>
+                   </tr>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=61550">
+                      more info...
+                     </a>
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+                <td valign="top">
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=61550">
+                  <b>
+                   14-kt. diamond solitaire earrings (0.33 tw)
+                  </b>
+                 </a>
+                 <br />
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td valign="top">
+                     <table>
+                      <tbody>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          list price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <s>
+                          $639.99
+                         </s>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="bigred">
+                          <b>
+                           $199.99
+                          </b>
+                         </span>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          you save:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="littleorange">
+                          $440.00 (68%)
+                         </span>
+                        </td>
+                       </tr>
+                      </tbody>
+                     </table>
+                    </td>
+                    <td valign="top">
+                     <span class="normal">
+                      dazzle your way into her heart, with these classic diamond solitaire earrings. two brilliant-cut diamonds (0.33 total carat weight, g-h color, i-1 to i-2 clarity) are set in four prongs of 14-karat white gold.
+                      <br />
+                      <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=61550">
+                       <span class="tiny">
+                        <b>
+                         click here to purchase.
+                        </b>
+                       </span>
+                      </a>
+                     </span>
+                     <br />
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+               </tr>
+               <tr>
+                <td colspan="2" height="4">
+                 <img src="jewelry01_files/ms.gif" width="1" height="4" border="0" />
+                </td>
+               </tr>
+               <tr bgcolor="#dddddd">
+                <td valign="top" align="center">
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=51595">
+                      <img src="jewelry01_files/t917417.jpg" border="0" width="80" height="80" />
+                     </a>
+                    </td>
+                   </tr>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=51595">
+                      more info...
+                     </a>
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+                <td valign="top">
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=51595">
+                  <b>
+                   14-kt. diamond cross pendant (.06 tw)
+                  </b>
+                 </a>
+                 <br />
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td valign="top">
+                     <table>
+                      <tbody>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          list price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <s>
+                          $305.00
+                         </s>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="bigred">
+                          <b>
+                           $119.99
+                          </b>
+                         </span>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          you save:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="littleorange">
+                          $185.01 (60%)
+                         </span>
+                        </td>
+                       </tr>
+                      </tbody>
+                     </table>
+                    </td>
+                    <td valign="top">
+                     <span class="normal">
+                      over a cleanly sculpted roman cross of 14-karat white gold drapes a slender banner containing three bright prong-set round diamonds (0.06 total carat weight, h-i color, i clarity).
+                      <br />
+                      <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=51595">
+                       <span class="tiny">
+                        <b>
+                         click here to purchase.
+                        </b>
+                       </span>
+                      </a>
+                     </span>
+                     <br />
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+               </tr>
+               <tr bgcolor="#dddddd">
+                <td colspan="2">
+                 <table width="100%" border="0">
+                  <tbody>
+                   <tr>
+                    <td>
+                     <span class="tiny">
+                      <b>
+                       brenda of falmouth ma usa says..
+                      </b>
+                     </span>
+                    </td>
+                   </tr>
+                   <tr>
+                    <td>
+                     <span class="tiny">
+                      "the quality of this piece is absoultly amazing, it is subtle yet elegant and has such a beautiful shine to the gold."
+                     </span>
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+               </tr>
+               <tr>
+                <td colspan="2" height="4">
+                 <img src="jewelry01_files/ms.gif" width="1" height="4" border="0" />
+                </td>
+               </tr>
+               <tr bgcolor="#ffffff">
+                <td valign="top" align="center">
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=64736">
+                      <img src="jewelry01_files/t920349.jpg" border="0" width="80" height="80" />
+                     </a>
+                    </td>
+                   </tr>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=64736">
+                      more info...
+                     </a>
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+                <td valign="top">
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=64736">
+                  <b>
+                   14-kt. diamond solitaire stud earrings (.50 tw)
+                  </b>
+                 </a>
+                 <br />
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td valign="top">
+                     <table>
+                      <tbody>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          list price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <s>
+                          $999.99
+                         </s>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="bigred">
+                          <b>
+                           $359.99
+                          </b>
+                         </span>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          you save:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="littleorange">
+                          $640.00 (64%)
+                         </span>
+                        </td>
+                       </tr>
+                      </tbody>
+                     </table>
+                    </td>
+                    <td valign="top">
+                     <span class="normal">
+                      every jewelry collection needs a classic pair of diamond solitaire earrings. set in 14-karat gold, these diamond stud earrings (0.50 total carat weight) have post backs with butterfly clasps.
+                      <br />
+                      <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=64736">
+                       <span class="tiny">
+                        <b>
+                         click here to purchase.
+                        </b>
+                       </span>
+                      </a>
+                     </span>
+                     <br />
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+               </tr>
+               <tr>
+                <td colspan="2" height="4">
+                 <img src="jewelry01_files/ms.gif" width="1" height="4" border="0" />
+                </td>
+               </tr>
+               <tr bgcolor="#dddddd">
+                <td valign="top" align="center">
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=64735">
+                      <img src="jewelry01_files/t920348.jpg" border="0" width="80" height="80" />
+                     </a>
+                    </td>
+                   </tr>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=64735">
+                      more info...
+                     </a>
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+                <td valign="top">
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=64735">
+                  <b>
+                   14-kt. cultured pearl diamond earrings
+                  </b>
+                 </a>
+                 <br />
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td valign="top">
+                     <table>
+                      <tbody>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          list price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <s>
+                          $508.99
+                         </s>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="bigred">
+                          <b>
+                           $179.99
+                          </b>
+                         </span>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          you save:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="littleorange">
+                          $329.00 (64%)
+                         </span>
+                        </td>
+                       </tr>
+                      </tbody>
+                     </table>
+                    </td>
+                    <td valign="top">
+                     <span class="normal">
+                      create an elegant appearance with these pearl and diamond stud earrings. set in 14-karat yellow gold, each earring features an 8 to 8.5-mm cultured white pearl. prong-set round diamonds accent the pearls. posts with butterfly clasps secure the earrings.
+                      <br />
+                      <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=64735">
+                       <span class="tiny">
+                        <b>
+                         click here to purchase.
+                        </b>
+                       </span>
+                      </a>
+                     </span>
+                     <br />
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+               </tr>
+               <tr>
+                <td colspan="2" height="4">
+                 <img src="jewelry01_files/ms.gif" width="1" height="4" border="0" />
+                </td>
+               </tr>
+               <tr bgcolor="#ffffff">
+                <td valign="top" align="center">
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=64734">
+                      <img src="jewelry01_files/t920347.jpg" border="0" width="80" height="80" />
+                     </a>
+                    </td>
+                   </tr>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=64734">
+                      more info...
+                     </a>
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+                <td valign="top">
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=64734">
+                  <b>
+                   14-kt. diamond 7.5-8 mm pearl pendant
+                  </b>
+                 </a>
+                 <br />
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td valign="top">
+                     <table>
+                      <tbody>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          list price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <s>
+                          $196.99
+                         </s>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="bigred">
+                          <b>
+                           $69.99
+                          </b>
+                         </span>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          you save:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="littleorange">
+                          $127.00 (64%)
+                         </span>
+                        </td>
+                       </tr>
+                      </tbody>
+                     </table>
+                    </td>
+                    <td valign="top">
+                     <span class="normal">
+                      add a classic to your jewelry collection with this 14-karat gold, diamond, and pearl necklace. the 7.5-8 mm cultured white pearl creates the focal point of the pendant, while a diamond (0.10 tw) adds sparkle.
+                      <br />
+                      <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=64734">
+                       <span class="tiny">
+                        <b>
+                         click here to purchase.
+                        </b>
+                       </span>
+                      </a>
+                     </span>
+                     <br />
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+               </tr>
+               <tr>
+                <td colspan="2" height="4">
+                 <img src="jewelry01_files/ms.gif" width="1" height="4" border="0" />
+                </td>
+               </tr>
+               <tr bgcolor="#dddddd">
+                <td valign="top" align="center">
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=61551">
+                      <img src="jewelry01_files/t918933.jpg" border="0" width="80" height="80" />
+                     </a>
+                    </td>
+                   </tr>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=61551">
+                      more info...
+                     </a>
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+                <td valign="top">
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=61551">
+                  <b>
+                   14-kt. diamond solitaire earrings (.50 tw)
+                  </b>
+                 </a>
+                 <br />
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td valign="top">
+                     <table>
+                      <tbody>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          list price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <s>
+                          $1,369.99
+                         </s>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="bigred">
+                          <b>
+                           $409.99
+                          </b>
+                         </span>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          you save:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="littleorange">
+                          $960.00 (70%)
+                         </span>
+                        </td>
+                       </tr>
+                      </tbody>
+                     </table>
+                    </td>
+                    <td valign="top">
+                     <span class="normal">
+                      this earring set has two brilliant-cut diamonds (0.50 total carat weight, g-h color, i-1 to i-2 clarity) set in four prongs of 14-karat white gold.
+                      <br />
+                      <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=61551">
+                       <span class="tiny">
+                        <b>
+                         click here to purchase.
+                        </b>
+                       </span>
+                      </a>
+                     </span>
+                     <br />
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+               </tr>
+               <tr>
+                <td colspan="2" height="4">
+                 <img src="jewelry01_files/ms.gif" width="1" height="4" border="0" />
+                </td>
+               </tr>
+               <tr bgcolor="#ffffff">
+                <td valign="top" align="center">
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=53841">
+                      <img src="jewelry01_files/t918271.jpg" border="0" width="80" height="80" />
+                     </a>
+                    </td>
+                   </tr>
+                   <tr>
+                    <td>
+                     <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=53841">
+                      more info...
+                     </a>
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+                <td valign="top">
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=53841">
+                  <b>
+                   14-kt white gold diamond band (0.50 tw)
+                  </b>
+                 </a>
+                 <br />
+                 <table>
+                  <tbody>
+                   <tr>
+                    <td valign="top">
+                     <table>
+                      <tbody>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          list price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <s>
+                          $1,635.00
+                         </s>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          price:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="bigred">
+                          <b>
+                           $609.99
+                          </b>
+                         </span>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td align="right" nowrap="nowrap">
+                         <b>
+                          you save:
+                         </b>
+                        </td>
+                        <td align="left" nowrap="nowrap">
+                         <span class="littleorange">
+                          $1,025.01 (62%)
+                         </span>
+                        </td>
+                       </tr>
+                      </tbody>
+                     </table>
+                    </td>
+                    <td valign="top">
+                     <span class="normal">
+                      crafted of 14-karat white gold, this stylish ring features a bright row of 20 channel-set, princess-cut baguette diamonds. treat her like royalty and save when you buy jewelry treasures at overstock.com.
+                      <br />
+                      <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=proframe&amp;prod_id=53841">
+                       <span class="tiny">
+                        <b>
+                         click here to purchase.
+                        </b>
+                       </span>
+                      </a>
+                     </span>
+                     <br />
+                    </td>
+                   </tr>
+                  </tbody>
+                 </table>
+                </td>
+               </tr>
+               <tr>
+                <td colspan="2" height="4">
+                 <img src="jewelry01_files/ms.gif" width="1" height="4" border="0" />
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </td>
+       </tr>
+       <tr>
+        <td align="center">
+         <br />
+         <table border="1" cellpadding="0" cellspacing="0">
+          <tbody>
+           <tr>
+            <td>
+             <table width="100%" border="0" cellpadding="0" cellspacing="5" bgcolor="#d2dbfb">
+              <tbody>
+               <tr>
+                <td nowrap="nowrap" align="right">
+                 <span class="littleorange">
+                  <b>
+                   list sorted by:
+                  </b>
+                 </span>
+                </td>
+                <td nowrap="nowrap">
+                  
+                 <b>
+                  top sellers
+                 </b>
+                 |
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=999&amp;cat_sortby=3">
+                  discount
+                 </a>
+                 |
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=999&amp;cat_sortby=5">
+                  newest first
+                 </a>
+                 |
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=999&amp;cat_sortby=1">
+                  price
+                 </a>
+                 |
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=999&amp;cat_sortby=4">
+                  quantity
+                 </a>
+                 |
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=999&amp;cat_sortby=6">
+                  markdowns
+                 </a>
+                </td>
+               </tr>
+               <tr>
+                <td nowrap="nowrap" align="right">
+                  
+                 <span class="littleorange">
+                  <b>
+                   items:
+                  </b>
+                 </span>
+                </td>
+                <td nowrap="nowrap">
+                  
+                 <b>
+                  16
+                 </b>
+                 -
+                 <b>
+                  30
+                 </b>
+                 of
+                 <b>
+                  296
+                 </b>
+                   |  
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=999&amp;item_count=0&amp;cat_sortby=0">
+                  first page
+                 </a>
+                   |  
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=999&amp;item_count=0&amp;cat_sortby=0">
+                  previous 15
+                 </a>
+                   |  
+                 <a href="http://www.overstock.com/cgi-bin/d2.cgi?page=catlist&amp;pro_sub_cat=307&amp;pro_ssub_cat=999&amp;item_count=30&amp;cat_sortby=0">
+                  next 15
+                 </a>
+                   
+                </td>
+               </tr>
+              </tbody>
+             </table>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </td>
+   </tr>
+   <tr>
+    <td bgcolor="#000000" width="1">
+     <img src="jewelry01_files/ms.gif" border="0" width="1" height="1" />
+    </td>
+    <td bgcolor="#eeeeee" align="center" valign="bottom">
+     © 2003
+     <br />
+     overstock.com
+    </td>
+    <td bgcolor="#000000" width="1">
+     <img src="jewelry01_files/ms.gif" border="0" width="1" height="1" />
+    </td>
+    <td bgcolor="#ffffff" colspan="2" align="center">
+     <br />
+     <span class="tiny">
+      * $2.95 flat rate shipping to the lower 48 states only.  some items excluded due to size and/or weight.
+     </span>
+     <img src="jewelry01_files/verify2.gif" border="0" usemap="#verify.html" />
+     <br />
+     <img src="jewelry01_files/ms.gif" border="0" width="600" height="1" />
+    </td>
+   </tr>
+   <tr>
+    <td colspan="5" height="1" bgcolor="#000000">
+     <img src="jewelry01_files/ms.gif" border="0" width="1" height="1" />
+    </td>
+   </tr>
+  </tbody>
+ </table>
+ <map name="verify.html">
+  <area shape="rect" coords="  0,0, 52,58" href="https://digitalid.verisign.com/as2/e60bd85270441eecc2df2e3c53a8ed60" target="new">
+  </area>
+  <area shape="rect" coords=" 53,0,122,58" href="http://www.bizrate.com/merchant/reports/index.xpml?mid=23819" target="new">
+  </area>
+  <area shape="rect" coords="123,0,200,58" href="http://www.bbbonline.org/cks.asp?id=10010249233612695" target="new">
+  </area>
+ </map>
+ <!-- cache built: 2003-02-24/05:32:36 -->
+ <!-- server: web13.overstock.com -->
+</body>
