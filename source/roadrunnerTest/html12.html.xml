@@ -1,14 +1,28 @@
 <body>
  books of:
  <b>
-  paul jones
+  john smith
  </b>
  <ul>
   <li>
-   xml at work
+   computer systems
    <p>
     <b>
-     1st ed., 1999
+     1st ed., 1995
+    </b>
+   </p>
+  </li>
+  <li>
+   database primer
+   <p>
+    <b>
+     1st ed., 1998
+     <i>
+      special!
+     </i>
+    </b>
+    <b>
+     2nd ed., 2000
     </b>
    </p>
   </li>
