@@ -6,49 +6,54 @@ import java.util.UUID
 
 import com.ieps.parser.preprocess.HtmlStripper
 import com.typesafe.scalalogging.StrictLogging
-import org.jsoup.nodes.{Document, Element}
+import org.jsoup.nodes.{Document, Element, Node}
+import org.jsoup.parser.Tag
 
 import scala.collection.JavaConverters._
 import scala.collection.mutable
 import scala.util.Random
 
 object RoadRunner {
-  def apply(inputDocuments: List[Document]): RoadRunner = new RoadRunner(inputDocuments)
+  def apply(baseUrl: String, inputDocuments: List[Document]): RoadRunner = new RoadRunner(baseUrl, inputDocuments)
 
-  trait Mismatch
-  case object TagMismatch extends Mismatch
-  case object LengthMismatch extends Mismatch
-  case object OptionMismatch extends Mismatch
-  case object TextMismatch extends Mismatch
+  trait HtmlProperties
+  case object TagMismatch extends HtmlProperties
+  case object LengthMismatch extends HtmlProperties
+  case object OptionMismatch extends HtmlProperties
+  case object TextMismatch extends HtmlProperties
+  case object Iterator extends HtmlProperties
 }
 
-class RoadRunner(inputDocuments: List[Document]) extends StrictLogging {
+class RoadRunner(baseUrl: String, inputDocuments: List[Document]) extends StrictLogging {
   import RoadRunner._
 
   if (inputDocuments.isEmpty) {
     throw new Exception("Document list cannot be empty.")
   }
   val documents: List[Document] = inputDocuments.map(HtmlStripper.strip)
+  var wrapper = new Element("html")
 
   def outputStrippedHtml(): Unit = {
-    documents.foreach { document =>
-      Files.write(Paths.get(s"outputs/${UUID.randomUUID()}.html"), document.outerHtml().getBytes(StandardCharsets.UTF_8))
+    documents.zipWithIndex.foreach {
+      case (document, id) =>
+      Files.write(Paths.get(s"outputs/cleaned_$baseUrl-${id + 1}.html"), document.outerHtml().getBytes(StandardCharsets.UTF_8))
     }
+    Files.write(Paths.get(s"outputs/wrapper_$baseUrl.html"), wrapper.outerHtml().getBytes(StandardCharsets.UTF_8))
   }
 
   def run(): Unit = {
 //    val shuffled = Random.shuffle(documents) // TODO: uncomment this line when roadRunner is done
     val shuffled = documents
-    var wrapper = shuffled.head.body()
+    val referencePage = shuffled.head.body()
     val restDocuments = shuffled.tail
     restDocuments.foreach { document =>
-      wrapper = expandWrapper(wrapper, document.body())
+      wrapper = buildWrapper(referencePage, document.body()) // TODO: compare global wrapper with the returned one
     }
   }
 
   private def compareTag(wrapper: Element, document: Element): Boolean = wrapper.tagName().equals(document.tagName())
 
-  private def compareText(rootWrapper: Element, rootDocument: Element): Option[Mismatch] = {
+  private def compareText(rootWrapper: Element, rootDocument: Element): Option[HtmlProperties] = {
     val wrapperText = rootWrapper.text()
     val documentText = rootDocument.text()
     if (!wrapperText.equals(documentText)) {
@@ -58,32 +63,41 @@ class RoadRunner(inputDocuments: List[Document]) extends StrictLogging {
     }
   }
 
-  private def compareNodes(reference: Element, document: Element): List[Mismatch] = {
-    var mismatch: List[Mismatch] = Nil
+  private def compareNodes(reference: Element, document: Element): Seq[HtmlProperties] = {
+    val mismatch: mutable.MutableList[HtmlProperties] = mutable.MutableList.empty
     if (compareTag(reference, document)) {
       val referenceChildren = reference.children().asScala
       val documentChildren = document.children().asScala
       if (referenceChildren.length != documentChildren.length) {
-        mismatch = LengthMismatch :: mismatch
+        mismatch += LengthMismatch
       }
 
-      compareText(reference, document) match {
-        case Some(textMismatch) =>
-          if (referenceChildren.isEmpty && documentChildren.isEmpty) {
-            logger.info(s"Wrapper: ${reference.text()}")
-            logger.info(s"Document: ${document.text()}")
-          }
-          mismatch = textMismatch :: mismatch
-        case None =>
+      referenceChildren.headOption.foreach{ head =>
+//          logger.info(s"reference children: ${referenceChildren.map(_.tagName())}")
+//          logger.info(s"document children: ${documentChildren.map(_.tagName())}")
+//          logger.info(s"reference all equal: ${referenceChildren.forall(_.tagName().equals(head.tagName()))}")
+//          logger.info(s"document all equal: ${documentChildren.forall(_.tagName().equals(head.tagName()))}")
+        if (referenceChildren.tail.forall(_.tagName().equals(head.tagName()))
+              && documentChildren.forall(_.tagName().equals(head.tagName()))) {
+          mismatch += Iterator
+        }
+      }
+
+      compareText(reference, document).foreach {textMismatch =>
+        if (referenceChildren.isEmpty && documentChildren.isEmpty) {
+          logger.info(s"Wrapper: ${reference.text()}")
+          logger.info(s"Document: ${document.text()}")
+          mismatch += textMismatch
+        }
       }
 
       mismatch
     } else {
-      TagMismatch :: mismatch
+      mismatch += TagMismatch
     }
   }
 
-  def zipChildren(referenceChildren: List[Element], documentChildren: List[Element]): List[(Option[Element], Option[Element])] = {
+  private def zipChildren(referenceChildren: List[Element], documentChildren: List[Element]): List[(Option[Element], Option[Element])] = {
     (referenceChildren, documentChildren) match {
       case (List(), List()) => Nil
       case (List(), documentHead::documentTail) => (None, Some(documentHead)) :: zipChildren(Nil, documentTail)
@@ -99,35 +113,49 @@ class RoadRunner(inputDocuments: List[Document]) extends StrictLogging {
     }
   }
 
-  private def expandWrapper(rootReference: Element, rootDocument: Element): Element = {
+  private def expandWrapper(originalWrapper: Element, newWrapper: Element): Element = {
+    originalWrapper
+  }
+
+  private def buildWrapper(rootReference: Element, rootDocument: Element): Element = {
     // TODO:
     //    1. iterate over tags
     //    2. solve mismatches:
     //      - text mismatches -> data fields OR items
     //      - tag mismatches -> optional items OR iterators (list of items)
-    val htmlMismatches: List[Mismatch] = compareNodes(rootReference, rootDocument)
+    var wrapper = new Element(rootReference.tagName())
+    val htmlProperties: Seq[HtmlProperties] = compareNodes(rootReference, rootDocument)
+
+    if (htmlProperties.intersect(List(LengthMismatch, Iterator)).equals(List(LengthMismatch, Iterator))) wrapper.addClass("data-items") // based on this we now know that we need to generalize a single data item in the foreach below
+
+    if (htmlProperties.contains(TextMismatch)) wrapper.addClass("data")
 
     val referenceChildren: List[Element] = rootReference.children().asScala.toList
     val documentChildren: List[Element] = rootDocument.children().asScala.toList
 
-//    if (htmlMismatches.nonEmpty) logger.info(s"Mismatch types: $htmlMismatches")
+    if (htmlProperties.nonEmpty) logger.info(s"Mismatch types: $htmlProperties")
 
     val zipped = zipChildren(referenceChildren, documentChildren)
-//    logger.info(s"Zipped: ${zipped.map(el => s"(${el._1.map(_.tagName())}, ${el._2.map(_.tagName())})")}")
     zipped.foreach {
-      case (Some(wrapper: Element), Some(document: Element)) =>
-        expandWrapper(wrapper, document)
+      case (Some(referencePage: Element), Some(document: Element)) =>
+//        if (htmlProperties.contains(Iterator)) {
+//          wrapper = expandWrapper(wrapper, buildWrapper(referencePage, document))
+//        } else {
+          wrapper.appendChild(buildWrapper(referencePage, document))
+//        }
       case (None, Some(document: Element)) =>
-        // TODO: mark element as optional and add it to the wrapper
-        logger.info(s"Missing wrapper, htmlMismatches: $htmlMismatches")
+        // TODO: mark child element as optional and add it to the wrapper
+        wrapper.addClass("optional")
+        logger.info(s"Missing wrapper, htmlPropertieses: $htmlProperties")
 //        logger.info(s"$document") // is optional
       case (Some(wrapper: Element), None) =>
-        // TODO: mark element as optional
-        logger.info(s"Missing document, htmlMismatches: $htmlMismatches")
+        // TODO: mark child element as optional
+        wrapper.addClass("optional")
+        logger.info(s"Missing document, htmlPropertieses: $htmlProperties")
 //        logger.info(s"$wrapper") // is optional
       case rest => logger.error(s"wut? $rest")
     }
 
-    rootReference
+    wrapper
   }
 }

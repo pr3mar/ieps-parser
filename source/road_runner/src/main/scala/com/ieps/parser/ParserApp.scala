@@ -29,8 +29,8 @@ object ParserApp extends App with StrictLogging {
   }.toList
 
   Utils.time("RoadRunner"){
-    val roadRunner = RoadRunner(inputFiles)
+    val roadRunner = RoadRunner(baseUrl, inputFiles)
     roadRunner.run()
-//    roadRunner.outputStrippedHtml()
+    roadRunner.outputStrippedHtml()
   }
 }
