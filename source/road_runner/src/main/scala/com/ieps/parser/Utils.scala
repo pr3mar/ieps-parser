@@ -11,5 +11,4 @@ object Utils extends StrictLogging {
     logger.info(s"Elapsed time for $funName: ${(t1 - t0)/ 10e9} s")
     result
   }
-
 }
