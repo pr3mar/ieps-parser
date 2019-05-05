@@ -14,7 +14,7 @@ object HtmlStripper {
     // remove empty tags such as `<span></span>` and nested tags with no text `<div><div></div></div>`
     // adapted from here: https://stackoverflow.com/questions/8711032/remove-empty-tag-pairs-from-html-fragment#8803252
     cleanedDocument.select("*").asScala.foreach { element =>
-      if ((!element.hasText && element.isBlock) || (!element.hasText && element.childNodes().isEmpty)) element.remove()
+      if (!element.hasText && element.isBlock) element.remove()
     }
     cleanedDocument
   }
