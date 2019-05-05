@@ -1,5 +1,5 @@
-{
-    "1": {
+[
+    {
         "Old Price": "", 
         "City": "Cetinje", 
         "Current Price": "35500 €", 
@@ -10,7 +10,7 @@
         "KM": "93000", 
         "Fuel type": "Dizel"
     }, 
-    "2": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "3800 €", 
@@ -21,7 +21,7 @@
         "KM": "76123", 
         "Fuel type": "Dizel"
     }, 
-    "3": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "11500 €", 
@@ -32,7 +32,7 @@
         "KM": "535000", 
         "Fuel type": "Dizel"
     }, 
-    "4": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "6500 €", 
@@ -43,7 +43,7 @@
         "KM": "1000", 
         "Fuel type": "Dizel"
     }, 
-    "5": {
+    {
         "Old Price": "", 
         "City": "Ulcinj", 
         "Current Price": "10700 €", 
@@ -54,7 +54,7 @@
         "KM": "315038", 
         "Fuel type": "Dizel"
     }, 
-    "6": {
+    {
         "Old Price": "", 
         "City": "Bijelo Polje", 
         "Current Price": "39500 €", 
@@ -65,7 +65,7 @@
         "KM": "400000", 
         "Fuel type": "Dizel"
     }, 
-    "7": {
+    {
         "Old Price": "", 
         "City": "Bijelo Polje", 
         "Current Price": "13000 €", 
@@ -76,7 +76,7 @@
         "KM": "120000", 
         "Fuel type": "Dizel"
     }, 
-    "8": {
+    {
         "Old Price": "", 
         "City": "Danilovgrad", 
         "Current Price": "13500 €", 
@@ -87,7 +87,7 @@
         "KM": "181565", 
         "Fuel type": "Dizel"
     }, 
-    "9": {
+    {
         "Old Price": "", 
         "City": "Nikšić", 
         "Current Price": "5900 €", 
@@ -98,7 +98,7 @@
         "KM": "278343", 
         "Fuel type": "Dizel"
     }, 
-    "10": {
+    {
         "Old Price": "4500 €", 
         "City": "Ulcinj", 
         "Current Price": "3900 €", 
@@ -109,7 +109,7 @@
         "KM": "285000", 
         "Fuel type": "Dizel"
     }, 
-    "11": {
+    {
         "Old Price": "11500 €", 
         "City": "Podgorica", 
         "Current Price": "10950 €", 
@@ -120,7 +120,7 @@
         "KM": "480000", 
         "Fuel type": "Dizel"
     }, 
-    "12": {
+    {
         "Old Price": "9500 €", 
         "City": "Podgorica", 
         "Current Price": "9300 €", 
@@ -131,7 +131,7 @@
         "KM": "468000", 
         "Fuel type": "Dizel"
     }, 
-    "13": {
+    {
         "Old Price": "", 
         "City": "Budva", 
         "Current Price": "15000 €", 
@@ -142,7 +142,7 @@
         "KM": "500000", 
         "Fuel type": "Dizel"
     }, 
-    "14": {
+    {
         "Old Price": "", 
         "City": "Andrijevica", 
         "Current Price": "7000 €", 
@@ -153,7 +153,7 @@
         "KM": "15000", 
         "Fuel type": "Dizel"
     }, 
-    "15": {
+    {
         "Old Price": "", 
         "City": "Rožaje", 
         "Current Price": "6000 €", 
@@ -164,7 +164,7 @@
         "KM": "0", 
         "Fuel type": "Dizel"
     }, 
-    "16": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "4600 €", 
@@ -175,7 +175,7 @@
         "KM": "300000", 
         "Fuel type": "Dizel"
     }, 
-    "17": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "4600 €", 
@@ -186,7 +186,7 @@
         "KM": "300", 
         "Fuel type": "Dizel"
     }, 
-    "18": {
+    {
         "Old Price": "", 
         "City": "Danilovgrad", 
         "Current Price": "35500 €", 
@@ -197,7 +197,7 @@
         "KM": "142000", 
         "Fuel type": "Dizel"
     }, 
-    "19": {
+    {
         "Old Price": "", 
         "City": "Kotor", 
         "Current Price": "4000 €", 
@@ -208,7 +208,7 @@
         "KM": "0", 
         "Fuel type": "Dizel"
     }, 
-    "20": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "7500 €", 
@@ -219,7 +219,7 @@
         "KM": "350000", 
         "Fuel type": "Dizel"
     }, 
-    "21": {
+    {
         "Old Price": "", 
         "City": "Berane", 
         "Current Price": "4100 €", 
@@ -230,7 +230,7 @@
         "KM": "250000", 
         "Fuel type": "Dizel"
     }, 
-    "22": {
+    {
         "Old Price": "", 
         "City": "Kotor", 
         "Current Price": "3000 €", 
@@ -241,7 +241,7 @@
         "KM": "186000", 
         "Fuel type": "Dizel"
     }, 
-    "23": {
+    {
         "Old Price": "", 
         "City": "Kotor", 
         "Current Price": "8500 €", 
@@ -252,7 +252,7 @@
         "KM": "436000", 
         "Fuel type": "Dizel"
     }, 
-    "24": {
+    {
         "Old Price": "", 
         "City": "Berane", 
         "Current Price": "35000 €", 
@@ -263,7 +263,7 @@
         "KM": "570000", 
         "Fuel type": "Dizel"
     }, 
-    "25": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "15800 €", 
@@ -274,7 +274,7 @@
         "KM": "732000", 
         "Fuel type": "Dizel"
     }, 
-    "26": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "13000 €", 
@@ -285,7 +285,7 @@
         "KM": "1300000", 
         "Fuel type": "Dizel"
     }, 
-    "27": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "32500 €", 
@@ -296,7 +296,7 @@
         "KM": "610000", 
         "Fuel type": "Dizel"
     }, 
-    "28": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "19900 €", 
@@ -307,4 +307,4 @@
         "KM": "1616379", 
         "Fuel type": "Dizel"
     }
-}
+]

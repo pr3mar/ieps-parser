@@ -1,5 +1,5 @@
-{
-    "1": {
+[
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "3900 €", 
@@ -10,7 +10,7 @@
         "KM": "131232", 
         "Fuel type": "Dizel"
     }, 
-    "2": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "2650 €", 
@@ -21,7 +21,7 @@
         "KM": "199234", 
         "Fuel type": "Dizel"
     }, 
-    "3": {
+    {
         "Old Price": "", 
         "City": "Budva", 
         "Current Price": "9000 €", 
@@ -32,7 +32,7 @@
         "KM": "237000", 
         "Fuel type": "Dizel"
     }, 
-    "4": {
+    {
         "Old Price": "", 
         "City": "Bar", 
         "Current Price": "10900 €", 
@@ -43,7 +43,7 @@
         "KM": "200900", 
         "Fuel type": "Dizel"
     }, 
-    "5": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "4100 €", 
@@ -54,7 +54,7 @@
         "KM": "185500", 
         "Fuel type": "Dizel"
     }, 
-    "6": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "4650 €", 
@@ -65,7 +65,7 @@
         "KM": "233000", 
         "Fuel type": "Dizel"
     }, 
-    "7": {
+    {
         "Old Price": "", 
         "City": "Cetinje", 
         "Current Price": "8550 €", 
@@ -76,7 +76,7 @@
         "KM": "126000", 
         "Fuel type": "Dizel"
     }, 
-    "8": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "9990 €", 
@@ -87,7 +87,7 @@
         "KM": "217000", 
         "Fuel type": "Dizel"
     }, 
-    "9": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "5899 €", 
@@ -98,7 +98,7 @@
         "KM": "245000", 
         "Fuel type": "Dizel"
     }, 
-    "10": {
+    {
         "Old Price": "", 
         "City": "Bar", 
         "Current Price": "11499 €", 
@@ -109,7 +109,7 @@
         "KM": "143000", 
         "Fuel type": "Dizel"
     }, 
-    "11": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "4400 €", 
@@ -120,7 +120,7 @@
         "KM": "216", 
         "Fuel type": "Dizel"
     }, 
-    "12": {
+    {
         "Old Price": "", 
         "City": "Berane", 
         "Current Price": "4500 €", 
@@ -131,7 +131,7 @@
         "KM": "236764", 
         "Fuel type": "Dizel"
     }, 
-    "13": {
+    {
         "Old Price": "", 
         "City": "Berane", 
         "Current Price": "5300 €", 
@@ -142,7 +142,7 @@
         "KM": "216736", 
         "Fuel type": "Dizel"
     }, 
-    "14": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "12950 €", 
@@ -153,7 +153,7 @@
         "KM": "103000", 
         "Fuel type": "Dizel"
     }, 
-    "15": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "4850 €", 
@@ -164,7 +164,7 @@
         "KM": "211358", 
         "Fuel type": "Dizel"
     }, 
-    "16": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "10000 €", 
@@ -175,7 +175,7 @@
         "KM": "200000", 
         "Fuel type": "Dizel"
     }, 
-    "17": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "3200 €", 
@@ -186,7 +186,7 @@
         "KM": "238000", 
         "Fuel type": "Dizel"
     }, 
-    "18": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "4200 €", 
@@ -197,7 +197,7 @@
         "KM": "198000", 
         "Fuel type": "Dizel"
     }, 
-    "19": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "14800 €", 
@@ -208,7 +208,7 @@
         "KM": "144500", 
         "Fuel type": "Dizel"
     }, 
-    "20": {
+    {
         "Old Price": "", 
         "City": "Cetinje", 
         "Current Price": "6800 €", 
@@ -219,7 +219,7 @@
         "KM": "226000", 
         "Fuel type": "Dizel"
     }, 
-    "21": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "3800 €", 
@@ -230,7 +230,7 @@
         "KM": "250000", 
         "Fuel type": "Dizel"
     }, 
-    "22": {
+    {
         "Old Price": "", 
         "City": "Cetinje", 
         "Current Price": "9750 €", 
@@ -241,7 +241,7 @@
         "KM": "182000", 
         "Fuel type": "Dizel"
     }, 
-    "23": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "10500 €", 
@@ -252,7 +252,7 @@
         "KM": "218000", 
         "Fuel type": "Dizel"
     }, 
-    "24": {
+    {
         "Old Price": "", 
         "City": "Nikšić", 
         "Current Price": "2699 €", 
@@ -263,7 +263,7 @@
         "KM": "243150", 
         "Fuel type": "Dizel"
     }, 
-    "25": {
+    {
         "Old Price": "", 
         "City": "Nikšić", 
         "Current Price": "2999 €", 
@@ -274,7 +274,7 @@
         "KM": "248000", 
         "Fuel type": "Dizel"
     }, 
-    "26": {
+    {
         "Old Price": "", 
         "City": "Cetinje", 
         "Current Price": "8850 €", 
@@ -285,7 +285,7 @@
         "KM": "180000", 
         "Fuel type": "Dizel"
     }, 
-    "27": {
+    {
         "Old Price": "", 
         "City": "Podgorica", 
         "Current Price": "9900 €", 
@@ -296,7 +296,7 @@
         "KM": "241000", 
         "Fuel type": "Dizel"
     }, 
-    "28": {
+    {
         "Old Price": "5300 €", 
         "City": "Nikšić", 
         "Current Price": "4900 €", 
@@ -307,4 +307,4 @@
         "KM": "217000", 
         "Fuel type": "Dizel"
     }
-}
+]
