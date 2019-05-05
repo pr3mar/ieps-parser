@@ -34,14 +34,14 @@ class RoadRunner(baseUrl: String, inputDocuments: List[Document]) extends Strict
     throw new Exception("Document list cannot be empty.")
   }
   val documents: List[Document] = inputDocuments.map(HtmlStripper.strip)
-  var wrapper = new Element("html")
+  var outputWrapper = new Element("html")
 
   def outputStrippedHtml(): Unit = {
     documents.zipWithIndex.foreach {
       case (document, id) =>
       Files.write(Paths.get(s"outputs/cleaned_$baseUrl-${id + 1}.html"), document.outerHtml().getBytes(StandardCharsets.UTF_8))
     }
-    Files.write(Paths.get(s"outputs/wrapper_$baseUrl.html"), wrapper.outerHtml().getBytes(StandardCharsets.UTF_8))
+    Files.write(Paths.get(s"outputs/wrapper_$baseUrl.html"), outputWrapper.html().getBytes(StandardCharsets.UTF_8))
   }
 
   def run(): Unit = {
@@ -49,9 +49,11 @@ class RoadRunner(baseUrl: String, inputDocuments: List[Document]) extends Strict
     val shuffled = documents
     val referencePage = shuffled.head.body()
     val restDocuments = shuffled.tail
+    var pageWrapper = new Element("html")
     restDocuments.foreach { document =>
-      wrapper = buildWrapper(referencePage, document.body()) // TODO: compare global wrapper with the returned one
+      pageWrapper = buildWrapper(referencePage, document.body()) // TODO: compare global wrapper with the returned one
     }
+    outputWrapper.appendChild(pageWrapper)
   }
 
   private def compareTag(reference: Element, document: Element): Boolean = reference.tagName().equals(document.tagName())
@@ -59,7 +61,7 @@ class RoadRunner(baseUrl: String, inputDocuments: List[Document]) extends Strict
   private def compareText(reference: Element, document: Element): Option[HtmlProperties] = {
     val referenceText = reference.text()
     val documentText = document.text()
-    if (!referenceText.equals(documentText)) {
+    if (!referenceText.equals(documentText) && (!referenceText.equals("$data") || !documentText.equals("$data"))) {
       Some(TextMismatch)
     } else {
       None
@@ -94,6 +96,7 @@ class RoadRunner(baseUrl: String, inputDocuments: List[Document]) extends Strict
 
   private def compareNodes(reference: Element, document: Element): Seq[HtmlProperties] = {
     val mismatch: mutable.MutableList[HtmlProperties] = mutable.MutableList.empty
+
     if (compareTag(reference, document)) {
       val referenceChildren = reference.children().asScala
       val documentChildren = document.children().asScala
@@ -102,7 +105,7 @@ class RoadRunner(baseUrl: String, inputDocuments: List[Document]) extends Strict
         mismatch += LengthMismatch
       }
 
-      referenceChildren.headOption.foreach{ head =>
+      referenceChildren.headOption.foreach { head =>
         if (referenceChildren.tail.forall(_.tagName().equals(head.tagName()))
               && documentChildren.forall(_.tagName().equals(head.tagName()))) {
           mismatch += Iterator
@@ -111,8 +114,7 @@ class RoadRunner(baseUrl: String, inputDocuments: List[Document]) extends Strict
 
       compareText(reference, document).foreach {textMismatch =>
         if (referenceChildren.isEmpty && documentChildren.isEmpty) {
-          logger.info(s"Wrapper: ${reference.text()}")
-          logger.info(s"Document: ${document.text()}")
+//          logger.info(s"Wrapper/Document: `${reference.text()}`/`${document.text()}`")
           mismatch += DataMismatch
         } else {
           mismatch += textMismatch
@@ -132,25 +134,6 @@ class RoadRunner(baseUrl: String, inputDocuments: List[Document]) extends Strict
     } else {
       mismatch += TagMismatch
     }
-  }
-
-  private def handleIterator(iteratorElements: List[(Option[Element], Option[Element])]): Element = {
-    var generalItem = new Element(iteratorElements.head._1.get.tagName())
-    generalItem.addClass("data-item")
-//    iteratorElements.foreach {
-//      case (Some(referencePage: Element), Some(document: Element)) =>
-//        generalItem.appendChild(buildWrapper(referencePage, document))
-//
-//      case (None, Some(document: Element)) =>
-//        generalItem = expandWrapper(generalItem, document.clone())
-//
-//      case (Some(referencePage: Element), None) =>
-//        generalItem = expandWrapper(generalItem, referencePage.clone())
-//
-//      case rest => logger.error(s"wut? $rest")
-//    }
-
-    generalItem
   }
 
   private def zipChildren(referenceChildren: List[Element], documentChildren: List[Element]): List[(Option[Element], Option[Element])] = {
@@ -192,99 +175,154 @@ class RoadRunner(baseUrl: String, inputDocuments: List[Document]) extends Strict
   }
 
   private def expandWrapper(originalWrapper: Element, newWrapper: Element): Element = {
-    // TODO: finish this, needs to generalize the wrapper
     if (!compareTag(originalWrapper, newWrapper)) {
-      originalWrapper.appendChild(generalizeNode(newWrapper))
+      originalWrapper.appendChild(newWrapper)
       originalWrapper
     } else if (compareText(originalWrapper, newWrapper).isEmpty) {
       originalWrapper
     } else {
-      val wrapper = new Element(originalWrapper.tagName())
-      zipChildren(originalWrapper.children().asScala.toList, newWrapper.children().asScala.toList).foreach {
-        case (Some(origWrapper: Element), Some(newWrap: Element)) =>
-          wrapper.appendChild(expandWrapper(origWrapper, newWrap))
+      val zippedItems = zipChildren(originalWrapper.children().asScala.toList, newWrapper.children().asScala.toList)
+      logger.info(s"[expand] original: $originalWrapper")
+      logger.info(s"[expand] new: $newWrapper")
+      logger.info(s"[expand zipped] $zippedItems")//${zippedItems.map(el => s"(${el._1.map(_.tagName())}, ${el._2.map(_.tagName())})")}")
+      zippedItems match {
+        case List() =>
+          newWrapper
 
-        case (None, Some(newWrap: Element)) =>
-          // TODO: mark child element as optional and add it to the wrapper
-          newWrap.addClass("optional")
-          wrapper.appendChild(newWrap)
+        case zipped =>
+          var wrapperItem = new Element(originalWrapper.tagName())
+          zipped.foreach {
+          case (Some(origWrapper: Element), Some(newWrap: Element)) =>
+            logger.info(s"[expand both] item left: `$origWrapper`")
+            logger.info(s"[expand both] item right: `$newWrap`")
+            val expandedWrappers = expandWrapper(origWrapper, newWrap)
+            logger.info(s"[expand both] expanded: $expandedWrappers")
+            wrapperItem = expandWrapper(wrapperItem, expandedWrappers)
+            logger.info(s"[expand both] generalised $wrapperItem")
+            wrapperItem
 
-        case (Some(origWrapper: Element), None) =>
-          // TODO: mark child element as optional
-          origWrapper.addClass("optional")
-          wrapper.appendChild(origWrapper)
+          case (None, Some(newWrap: Element)) =>
+            logger.info(s"[expand right] item right: `$newWrap`")
+            newWrap.addClass("optional")
+            wrapperItem = expandWrapper(wrapperItem, newWrap)
+            logger.info(s"[expand right] generalised $wrapperItem")
 
-        case rest => logger.error(s"[expand] wut? $rest")
+            wrapperItem
+
+          case (Some(origWrapper: Element), None) =>
+            logger.info(s"[expand left] item left: `$origWrapper`")
+            origWrapper.addClass("optional")
+            wrapperItem = expandWrapper(wrapperItem, origWrapper)
+            logger.info(s"[expand left] generalised $wrapperItem")
+            wrapperItem
+
+          case rest => logger.error(s"[expand] wut? $rest")
+        }
+        wrapperItem
       }
-      wrapper
     }
   }
 
-  private def buildWrapper(rootReference: Element, rootDocument: Element): Element = {
+  private def handleIterator(iteratorElements: List[(Option[Element], Option[Element])]): Element = {
+    var generalItem = new Element(iteratorElements.head._1.get.tagName())
+    iteratorElements.foreach {
+      case (Some(referencePage: Element), Some(page: Element)) =>
+        val builtWrapper = buildWrapper(referencePage, page)
+        logger.info(s"[iterator both] expanding $generalItem")
+        generalItem = expandWrapper(generalItem, builtWrapper)
+        logger.info(s"[iterator both] expanded general item: $generalItem")
+
+      case (None, Some(page: Element)) =>
+        logger.info(s"[iterator right] items: `None` `$page`")
+        logger.info(s"[iterator right] expanding $generalItem")
+        val builtWrapper = buildWrapper(generalItem, generalizeNode(page.clone()))
+        generalItem = expandWrapper(generalItem, builtWrapper)
+        logger.info(s"[iterator right] expanded general item: $generalItem")
+
+      case (Some(referencePage: Element), None) =>
+        logger.info(s"[iterator left] items: `None` `$referencePage`")
+        logger.info(s"[iterator left] expanding $generalItem")
+        val builtWrapper = buildWrapper(generalItem, generalizeNode(referencePage.clone()))
+        generalItem = expandWrapper(generalItem, builtWrapper)
+        logger.info(s"[iterator left] expanded general item: $generalItem")
+
+      case rest => logger.error(s"wut? $rest")
+    }
+    generalItem.addClass("multiple")
+    generalItem.addClass("data-item")
+    generalItem
+  }
+
+  private def buildWrapper(rootReference: Element, rootPage: Element): Element = {
     // TODO:
     //    1. iterate over tags
     //    2. solve mismatches:
     //      - text mismatches -> data fields OR items
     //      - tag mismatches -> optional items OR iterators (list of items)
-    var wrapper = new Element(rootReference.tagName())
-    val htmlProperties: Seq[HtmlProperties] = compareNodes(rootReference, rootDocument)
+    var currentWrapper = new Element(rootReference.tagName())
+    val htmlProperties: Seq[HtmlProperties] = compareNodes(rootReference, rootPage)
 
-    if (htmlProperties.nonEmpty) logger.info(s"Mismatch types: $htmlProperties")
+//    if (htmlProperties.nonEmpty) logger.info(s"Mismatch types: $htmlProperties")
 
     if (htmlProperties.contains(LinkMismatch)) {
-      wrapper.attr("href", "$link")
-      wrapper.text("$link-data")
-      return wrapper
+      currentWrapper.attr("href", "$link")
+      currentWrapper.text("$link-data")
+      logger.info(s"[build] Built a link item: $currentWrapper")
+      return currentWrapper
     }
 
     if (htmlProperties.contains(ImageMismatch)) {
-      wrapper.attr("src", "$img-link")
-      wrapper.attr("alt", "$img-alt")
-      return wrapper
+      currentWrapper.attr("src", "$img-link")
+      currentWrapper.attr("alt", "$img-alt")
+      logger.info(s"[build] Built an image item: $currentWrapper")
+      return currentWrapper
     }
 
     if (htmlProperties.contains(DataMismatch)) {
-      if(!wrapper.hasClass("data")) {
-        wrapper.addClass("data")
-        wrapper.text("$data")
+      if (!currentWrapper.hasClass("data")) {
+        currentWrapper.addClass("data")
+        currentWrapper.text("$data")
       }
-      return wrapper
+      logger.info(s"[build] Built a data item: $currentWrapper")
+      return currentWrapper
     }
 
     if (!htmlProperties.contains(TextMismatch)) {
       // no need to compare the elements if they are identical, just add them to the wrapper
-      wrapper.appendChild(rootReference.clone())
-      return wrapper
+      return rootReference.clone()
     }
 
     val referenceChildren: List[Element] = rootReference.children().asScala.toList
-    val documentChildren: List[Element] = rootDocument.children().asScala.toList
+    val pageChildren: List[Element] = rootPage.children().asScala.toList
 
     if(referenceChildren.isEmpty) {
       logger.info(s"Children are empty: $rootReference")
-      return wrapper
+      return currentWrapper
     }
 
-    val zipped = zipChildren(referenceChildren, documentChildren)
+    val zipped = zipChildren(referenceChildren, pageChildren)
 
     if (htmlProperties.contains(TextMismatch) && htmlProperties.contains(Iterator)) {
-      logger.info(s"need to handle data-items") // based on this we now know that we need to generalize a single data item in the foreach below
-      wrapper.appendChild(handleIterator(zipped))
+      // based on this we now know that we need to generalize a single data item in the foreach below
+      logger.info(s"[build] building iterator with: $zipped")
+      currentWrapper.appendChild(handleIterator(zipped))
+      logger.info(s"[build] built iterator: $currentWrapper")
+      return currentWrapper
     } else {
-
       zipped.foreach {
-        case (Some(referencePage: Element), Some(document: Element)) =>
-          wrapper.appendChild(buildWrapper(referencePage, document))
+        case (Some(referencePage: Element), Some(page: Element)) =>
+          currentWrapper.appendChild(buildWrapper(referencePage, page))
 
-        case (None, Some(document: Element)) =>
-          wrapper = expandWrapper(wrapper, document.clone())
+        case (None, Some(page: Element)) =>
+          currentWrapper = buildWrapper(currentWrapper, page.clone())
 
         case (Some(referencePage: Element), None) =>
-          wrapper = expandWrapper(wrapper, referencePage.clone())
+          currentWrapper = expandWrapper(currentWrapper, referencePage.clone())
 
         case rest => logger.error(s"wut? $rest")
       }
-      wrapper
+      logger.info(s"[build] built item: $currentWrapper")
+      return currentWrapper
     }
   }
 }
