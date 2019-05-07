@@ -5,19 +5,18 @@ def parse(htmlFile, jsonFile):
 
 
     # REGEX FOR ITEM
-    regexItem = r"<td valign=\"top\" align=\"center\">.*?src=\"(.*?\.jpg)\"|<b>([\d\-kKt]{5}.*?)<\/b>|<s>(.*?)<\/s>|<span class=\"bigred\"><b>(\$\d*,*\d+.\d+)</b></span>|<span class=\"littleorange\">(\$\d*,*\d+.\d+)*\s\((\d+\%)\)</span>|<span class=\"normal\">\s*(.*?)\s*<br>"
+    regexItem = r"<b>([\d\-kKt]{5}.*?)<\/b>|<s>(.*?)<\/s>|<span class=\"bigred\"><b>(\$\d*,*\d+.\d+)</b></span>|<span class=\"littleorange\">(\$\d*,*\d+.\d+)*\s\((\d+\%)\)</span>|<span class=\"normal\">\s*(.*?)\s*<br>"
     item = re.compile(regexItem).findall(pageContent)
-    # print ('Found imgs | titles | list price | price | savings | percent | content: %s' %len(item))
 
     title, listPrice, price, saving, percent, content = [], [], [], [], [], [], 
 
     for x in item:
-        title.append(x[1])
-        listPrice.append(x[2])
-        price.append(x[3])
-        saving.append(x[4])
-        percent.append(x[5])
-        content.append(x[6])
+        title.append(x[0])
+        listPrice.append(x[1])
+        price.append(x[2])
+        saving.append(x[3])
+        percent.append(x[4])
+        content.append(x[5])
 
     title = list(filter(lambda x: x != '', title))
     listPrice = list(filter(lambda x: x != '', listPrice))
@@ -26,8 +25,7 @@ def parse(htmlFile, jsonFile):
     percent = list(filter(lambda x: x != '', percent))
     content = list(filter(lambda x: x != '', content))
 
-    dataItem = {
-        i+1:
+    dataItem = [
         {
             "Title": title[i],
             "ListPrice": listPrice[i], 
@@ -36,7 +34,7 @@ def parse(htmlFile, jsonFile):
             "SavingPercent": percent[i],
             "Content": content[i]
         }for i in range(0,len(title))
-    }
+    ]
 
     with open(jsonFile, 'w') as outfile:
             json.dump(dataItem, outfile, ensure_ascii=False, indent = 4)

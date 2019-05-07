@@ -33,8 +33,7 @@ def parse(htmlFile, jsonFile):
         currentPrice.append(i[0])
         oldPrice.append(i[2])
 
-    dataItem = {
-        i+1: 
+    dataItem = [
         {
             "Name": name[i],
             "Image": img[i], 
@@ -46,9 +45,8 @@ def parse(htmlFile, jsonFile):
             "Current Price": currentPrice[i],
             "Old Price": oldPrice[i]
         }for i in range(0,len(img))
-    }
+    ]
 
-    print(json.dumps(dataItem, ensure_ascii=False, indent=4))
 
     with open(jsonFile, 'w') as outfile:
             json.dump(dataItem, outfile, ensure_ascii=False, indent = 4)

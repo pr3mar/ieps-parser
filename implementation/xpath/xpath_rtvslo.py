@@ -12,6 +12,7 @@ title = str(tree.xpath('//*[contains(@class,"news-container")]//header//h1//text
 subtitle = str(tree.xpath('//*[contains(@class,"news-container")]//header//div[@class="subtitle"]//text()')[0])
 lead = str(tree.xpath('//*[contains(@class,"news-container")]//header//p[@class="lead"]//text()')[0])
 text = tree.xpath('//div[contains(@class,"article-body")]//p//text()')
+
 item = {"Author":authorN,"Date":publishT.replace("\n\t\t",""),"Title":title,"Subtitle":subtitle,"Lead":lead,"Content":text}
 
 output = sys.argv[2]
