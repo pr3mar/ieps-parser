@@ -17,8 +17,13 @@ sudo port install py27-lxml
 ```
 
 ## Running the code
-In order to run the scripts for three different pairs of web pages the following command should be executed with the programs found in `source/xpath` directory and input html files found in `WebPages/xpath/name_of_selected_page`. 
+In order to run the scripts for three different pairs of web pages the following command should be executed with the programs found in `source/xpath` directory and input html files found in `WebPages/xpath/name_of_selected_page`.
 ```bash
-python program_name input_html output_file.json
+python3 program_name input_html output_file.json
 ```
+Example command to run the program on a `jewelry01.html` from  `overstock.com` web page :
+ ```bash
+python3 xpath_overstock.py jewelry01.html jewelry01.json
+```
+
 
