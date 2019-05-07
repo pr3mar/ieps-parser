@@ -2,12 +2,10 @@ package com.ieps.parser.roadRunner
 
 import java.nio.charset.StandardCharsets
 import java.nio.file.{Files, Paths}
-import java.util.UUID
 
 import com.ieps.parser.preprocess.HtmlStripper
 import com.typesafe.scalalogging.StrictLogging
-import org.jsoup.nodes.{Document, Element, Node}
-import org.jsoup.parser.Tag
+import org.jsoup.nodes.{Document, Element}
 
 import scala.collection.JavaConverters._
 import scala.collection.mutable
@@ -45,13 +43,12 @@ class RoadRunner(baseUrl: String, inputDocuments: List[Document]) extends Strict
   }
 
   def run(): Unit = {
-//    val shuffled = Random.shuffle(documents) // TODO: uncomment this line when roadRunner is done
-    val shuffled = documents
+    val shuffled = Random.shuffle(documents)
     val referencePage = shuffled.head.body()
     val restDocuments = shuffled.tail
     var pageWrapper = new Element("html")
     restDocuments.foreach { document =>
-      pageWrapper = buildWrapper(referencePage, document.body()) // TODO: compare global wrapper with the returned one
+      pageWrapper = buildWrapper(referencePage, document.body())
     }
     outputWrapper.appendChild(pageWrapper)
   }
@@ -265,11 +262,6 @@ class RoadRunner(baseUrl: String, inputDocuments: List[Document]) extends Strict
   }
 
   private def buildWrapper(rootReference: Element, rootPage: Element): Element = {
-    // TODO:
-    //    1. iterate over tags
-    //    2. solve mismatches:
-    //      - text mismatches -> data fields OR items
-    //      - tag mismatches -> optional items OR iterators (list of items)
     var currentWrapper = new Element(rootReference.tagName())
     val htmlProperties: Seq[HtmlProperties] = compareNodes(rootReference, rootPage)
 

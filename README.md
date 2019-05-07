@@ -9,6 +9,9 @@ This repository contains 3 different approaches of document parsing:
 
 All the information required is in their respective `README.md` file.
 
+## Outputs
+All the pre-generated outputs of all the methods are within `./outputs` folder.
+
 ## Report
 **IMPORTANT: THE `report.pdf` FILE IN THE ROOT OF THE REPOSITORY IS SOFT-LINKED TO `./report/report.pdf`**
 The report can be found [here](./report/report.pdf).

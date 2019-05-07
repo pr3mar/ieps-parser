@@ -1,4 +1,4 @@
-# WIER: Crawler implementation
+# RoadRunner v2
 
 ## Brief description
 This is an implementation of a RoadRunner-like algorithm written in [Scala](https://www.scala-lang.org/).
