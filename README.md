@@ -1,29 +1,17 @@
-# XPath
+# WIER - Document Parsing
 ## Brief description
 
+This repository contains 3 different approaches of document parsing:
 
-This is an implementation of extracting structured data from three different pairs of web pages using XML path language - `XPATH` written in Python3.  
-It is using `LXML` library that offers support for `XPATH`.
+- Regular Expressions, access [here](./implementation/regex/README.md)
+- XPath, access [here](./implementation/xpath/README.md)
+- RoadRunner-like approach, access [here](./implementation/road_runner_v1/README.md) and [here](./implementation/road_runner/README.md)
 
-## Requirements
-In order to run the code you need to have `lxml` library installed which can be installed via :
-1. On linux platforms lxml cane be installed using system package manager, e.g. apt-get on Debian/Ubuntu: 
-```bash
-sudo apt-get install python3-lxml
-```
-2.On MacOS-X, a macport of lxml is available and can be installed via:
-```bash
-sudo port install py27-lxml 
-```
+All the information required is in their respective `README.md` file.
 
-## Running the code
-In order to run the scripts for three different pairs of web pages the following command should be executed with the programs found in `source/xpath` directory and input html files found in `WebPages/xpath/name_of_selected_page`.
-```bash
-python3 program_name input_html output_file.json
-```
-Example command to run the program on a `jewelry01.html` from  `overstock.com` web page :
- ```bash
-python3 xpath_overstock.py jewelry01.html jewelry01.json
-```
+## Outputs
+All the pre-generated outputs of all the methods are within `./outputs` folder.
 
-
+## Report
+**IMPORTANT: THE `report.pdf` FILE IN THE ROOT OF THE REPOSITORY IS SOFT-LINKED TO `./report/report.pdf`**
+The report can be found [here](./report/report.pdf).
