@@ -5,7 +5,7 @@
 This is an implementation of extracting structured data from three different pairs of web pages using XML path language - `XPATH` written in Python3.  
 It is using `LXML` library that offers support for `XPATH`.
 
-## Requirenments
+## Requirements
 In order to run the code you need to have `lxml` library installed which can be installed via :
 1. On linux platforms lxml cane be installed using system package manager, e.g. apt-get on Debian/Ubuntu: 
 ```bash
